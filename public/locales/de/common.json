@@ -1,0 +1,54 @@
+{
+  "about": "Über",
+  "address": "Die Anschrift",
+  "blog": "Bloggen",
+  "career": "Kontakt",
+  "careers": "Karriere",
+  "contact": "Kontakt",
+  "enterprise": "Unternehmen",
+  "faq": "Häufig gestellte Fragen",
+  "home": "Startseite",
+  "legal": "Gesetzlich",
+  "privacy": "Datenschutz",
+  "quicklinks": "Schnelllinks",
+  "shipping": "Shipping Policy",
+  "sitemap": "Seitenverzeichnis",
+  "slogan": "",
+  "tos": "Nutzungsbedingungen",
+  "title": "EVO Engineering",
+  "Imprint": "Impressum",
+  "whatWeDo": "Was wir tun?",
+  "ourVision": "Unsere Vision",
+  "ourMission": "Unsere Aufgabe",
+  "ourValues": "Unsere Werte",
+  "quality": "Qualität & Umwelt",
+  "management": "Management-Team",
+  "pages": {
+    "home": {
+      "metaTitle": "",
+      "metaDescription": "",
+      "title": "",
+      "slogan": "",
+      "feature1": {
+        "title": "Was wir tun?",
+        "description": "Wir unterstützen unsere Kunden bei der Entwicklung zukünftiger Generationen elektrischer Antriebe in der Automobilindustrie."
+      },
+      "feature2": {
+        "title": "Unsere Aufgabe",
+        "description": "Electric mobility is our passion!"
+      }
+    },
+    "contact": {
+      "metaTitle": "",
+      "metaDescription": ""
+    },
+    "about": {
+      "metaTitle": "",
+      "metaDescription": ""
+    },
+    "faq": {
+      "metaTitle": "",
+      "metaDescription": ""
+    }
+  }
+}

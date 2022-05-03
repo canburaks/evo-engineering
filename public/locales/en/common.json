@@ -1,0 +1,54 @@
+{
+  "about": "About",
+  "address": "Address",
+  "blog": "Blog",
+  "career": "Career",
+  "careers": "Careers",
+  "contact": "Contact",
+  "enterprise": "Enterprise",
+  "faq": "F.A.Q",
+  "home": "Home",
+  "legal": "Legal",
+  "privacy": "Privacy Policy",
+  "quicklinks": "Quicklinks",
+  "shipping": "Shipping Policy",
+  "sitemap": "Sitemap",
+  "slogan": "",
+  "tos": "Terms of Service",
+  "title": "Open Digital Gallery",
+  "imprint": "Imprint",
+  "whatWeDo": "What we do?",
+  "ourVision": "Our vision",
+  "ourMission": "Our mission",
+  "ourValues": "Our values",
+  "quality": "Quality & Environment",
+  "management": "Management Team",
+  "pages": {
+    "home": {
+      "metaTitle": "",
+      "metaDescription": "",
+      "title": "",
+      "slogan": "",
+      "feature1": {
+        "title": "What we do?",
+        "description": "We support our customers developing future generations of electric drives in the automotive sector. "
+      },
+      "feature2": {
+        "title": "Our mission",
+        "description": "Electric mobility is our passion!"
+      }
+    },
+    "contact": {
+      "metaTitle": "",
+      "metaDescription": ""
+    },
+    "about": {
+      "metaTitle": "",
+      "metaDescription": ""
+    },
+    "faq": {
+      "metaTitle": "",
+      "metaDescription": ""
+    }
+  }
+}

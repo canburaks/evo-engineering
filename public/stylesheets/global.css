@@ -1,0 +1,182 @@
+@import './tailwind.css';
+@import './fonts.css';
+@import './typography.css';
+@import './effects.css';
+@import './components/menu-dropdown.css';
+
+:root {
+  --teal: #22b8cf;
+  --blue: #2861e1;
+  --purple: #6c23ff;
+  --pink: #f129af;
+  --orange: #f65a5b;
+  --yellow: #ffbf18;
+  --light: #f5f5f5;
+  --dark: #1d1e1f;
+}
+html *,
+html[data-thene='light'] * {
+  --text: var(--dark);
+  --background: var(--light);
+}
+html[data-theme='dark'] * {
+  --text: var(--light);
+  --background: var(--dark);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box !important;
+}
+
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+/*-----------------------------------------------------------------------------------
+    Template Name: Rustic - React Business Template
+    Version: 1.0
+-----------------------------------------------------------------------------------
+    
+    INDEX
+    ===================
+	
+    - default
+    - header
+    - hero
+    - services
+    - project
+    - post
+    - pricing tab
+    - testimonial
+    - footer
+    - team
+
+-----------------------------------------------------------------------------------*/
+/*----------------------------------------*/
+/*  - default
+/*----------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap");
+
+
+.main-menu li.dropdown-button {
+    position: relative;
+}
+
+nav.offcanvas-menu.blurry, .blurry {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.dropdown-content {
+    display: none !important;
+    position: absolute;
+    width: 280px;
+    margin-left: -50%;
+    padding: 16px;
+    backdrop-filter: blur(32px) saturate(180%);
+    -webkit-backdrop-filter: blur(32px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+.dropdown-button:hover .dropdown-content,
+li.dropdown-button:hover .dropdown-content {
+    display: block !important;
+}
+ul.main-menu li span {
+    cursor: pointer;
+}
+.main-menu .dropdown-content a,
+nav ul.main-menu li a,
+nav ul.main-menu li span {
+    white-space: nowrap;
+    opacity: 0.7;
+    transition: all 0.3s ease-out;
+}
+.dropdown-content a:hover,
+nav ul li a:hover,
+nav ul li span:hover {
+    opacity: 1;
+}
+
+.video-bg {
+    position: relative;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.drawer-link {
+    font-size: 20px;
+    line-height: 3rem;
+    text-transform: uppercase;
+    color:#ffffff;
+    opacity: 0.7;
+    transition: opacity 300ms ease-out;
+}
+.drawer-link:hover {
+    opacity: 1;
+}
