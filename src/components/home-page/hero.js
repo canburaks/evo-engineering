@@ -13,7 +13,7 @@ const images = [
     "/img/_evo/slid/electrica-car-units3.jpg"
 ]
 const myLoader = ({ src, width, quality }) => {
-    return `${process.env.host}/${src}?w=${width}&q=${quality || 75}`
+    return `${process.env.HOST}/${src}?w=${width}&q=${quality || 75}`
 }
 const VideoEl = () => {
     const [isLoading, setIsLoading] = React.useState(true)
