@@ -15,7 +15,7 @@
   "sitemap": "Sitemap",
   "slogan": "",
   "tos": "Terms of Service",
-  "title": "Open Digital Gallery",
+  "title": "Next Generation Electrification | EVO Engineering",
   "imprint": "Imprint",
   "whatWeDo": "What we do?",
   "ourVision": "Our vision",
@@ -23,12 +23,61 @@
   "ourValues": "Our values",
   "quality": "Quality & Environment",
   "management": "Management Team",
+  "menu": {
+    "about": {
+      "title": "About us",
+      "description": "The things you want to know about EVO Engineering."
+    },
+    "visionMissionValues": {
+      "title": "Vision, Missin and Values",
+      "description": "About our vision, mission and values."
+    },
+    "quality": {
+      "title": "Quality",
+      "description": "Quality and standards we follow at EVO Engineering."
+    },
+    "support": {
+      "title": "Company"
+    },
+    "information": {
+      "title": "Information Security",
+      "description": "How we treat any kind of information"
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "The contact details."
+    },
+    "compliance": {
+      "title": "Compliance & Code of Ethics",
+      "description": "The code of ethics and compliance of EVO Engineering."
+    }
+  },
   "pages": {
     "home": {
-      "metaTitle": "",
+      "metaTitle": "Next Generation Electrification | EVO Engineering",
       "metaDescription": "",
-      "title": "",
+      "title": "Next Generation Electrification | EVO Engineering",
       "slogan": "",
+      "featureSection": {
+        "title": "Electric mobility is our passion",
+        "description": "As specialized automotive engineering service provider, we support our customers and partners to shape future mobility – worldwide in best-of-class quality. ",
+        "value1": {
+          "title": "Excellence",
+          "description": "Best-of-class engineering solutions. Continuous improvement and development of our expertise, quality and services. "
+        },
+        "value2": {
+          "title": "Respect",
+          "description": "We treat all people equally open mindend and respectfully."
+        },
+        "value3": {
+          "title": "Passion",
+          "description": "More than a job. Emotion and passion for future mobility."
+        },
+        "value4": {
+          "title": "Sustainability",
+          "description": "Next generation mobility for next generation people."
+        }
+      },
       "feature1": {
         "title": "What we do?",
         "description": "We support our customers developing future generations of electric drives in the automotive sector. "
@@ -39,12 +88,64 @@
       }
     },
     "contact": {
-      "metaTitle": "",
-      "metaDescription": ""
+      "metaTitle": "Contact | EVO Engineering GmbH",
+      "metaDescription": "The contact details of EVO Engineering GmbH",
+      "title": "Contact Information",
+      "description": "We'd love to hear from you. Send us an email or call us.",
+      "tel": "<a rel='noopener nofollow' href='+498937458130'>+49 89 374 581 30</a>",
+      "fax": "<p>+49 89 374 581 32</p>",
+      "email": "<a rel='noopener nofollow' href='mailto:info@evo-e.com'>info@evo-e.com</a>",
+      "office": {
+        "title": "Office",
+        "content": "<address>EVO Engineering GmbH <br/>Frankfurter Ring 105 <br/>80807 Munich <br/>Germany</address>"
+      },
+      "communication": {
+        "title": "Contact"
+      }
     },
     "about": {
-      "metaTitle": "",
-      "metaDescription": ""
+      "metaTitle": "About Us | EVO Engineering",
+      "metaDescription": "",
+      "title": "About us",
+      "description": "We'd love to hear from you. Send us an email or call us.",
+      "vision": {
+        "title": "Vision",
+        "description": "We pave electrification. Future mobility today."
+      },
+      "mission": {
+        "title": "Mission",
+        "description": "As specialized automotive engineering service provider, we support our customers and partners to shape future mobility – worldwide in best-of-class quality."
+      },
+      "values": {
+        "title": "Company values",
+        "description": "",
+        "value1": {
+          "title": "Excellence",
+          "description": "Best-of-class engineering solutions. Continuous improvement and development of our expertise, quality and services."
+        },
+        "value2": {
+          "title": "Respect",
+          "description": "We treat all people equally open mindend and respectfully."
+        },
+        "value3": {
+          "title": "Passion",
+          "description": "More than a job. Emotion and passion for future mobility."
+        },
+        "value4": {
+          "title": "Sustainability",
+          "description": "Next generation mobility for next generation people."
+        }
+      }
+    },
+    "quality": {
+      "metaTitle": "Quality | EVO Engineering GmbH",
+      "metaDescription": "Basis of our Quality Management System (QMS) are international standards such as ISO 9001 as well as customer, legal and other requirements. ",
+      "title": "Quality @ EVO Engineering",
+      "subtitle": "We are 'qualiteers' from the bottom of our hearts. ",
+      "p1": "Basis of our Quality Management System (QMS) are international standards such as ISO 9001 as well as customer, legal and other requirements. ",
+      "p2": "By establishing a QMS right from the very beginning we aim to ensure compliance with and correct implementation of all quality management requirements.",
+      "p3": "We continuously develop our competencies to be able to offer best-of-class quality to our customers and to meet or  rather exceed their expectations. ",
+      "p4": "EVO's top management is  commited in running, maintaining and continuously improving our QMS, and we will ensure that this policy ist communicated and performed within all levels of EVO staff. "
     },
     "faq": {
       "metaTitle": "",

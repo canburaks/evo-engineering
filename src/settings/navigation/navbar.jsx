@@ -1,41 +1,69 @@
 export const navbar = {
-    home: { key: "home", 
-    href:"/"
-},
+    home: { key: "home", href: "/" },
     about: {
         key: "about",
+        description: "menu.about",
         children: [
             {
-                key: "whatWeDo",
-                href:"/"
+                title: "menu.about.title",
+                description: "menu.about.description",
+                href: "/about-us"
             },
             {
-                key: "ourMission",
-                href:"/"
+                title: "menu.visionMissionValues.title",
+                description: "menu.visionMissionValues.description",
+                href: "/about-us#mission"
             },
             {
-                key: "ourVision",
-                href:"/"
+                title: "menu.quality.title",
+                description: "menu.quality.description",
+                href: "/about-us#quality"
             },
             {
-                key: "ourValues",
-                href:"/"
+                title: "ourMission",
+                href: "/about-us#mission"
             },
             {
-                key: "quality",
-                href:"/"
+                title: "ourVision",
+                href: "/about-us#vision"
             },
             {
-                key: "management",
-                href:"/"
+                title: "ourValues",
+                href: "/about-us#values"
+            },
+            {
+                title: "quality",
+                href: "/about-us/quality"
+            },
+            {
+                title: "management",
+                href: "/"
+            }
+        ]
+    },
+    support: {
+        title: "menu.contact.title",
+        children: [
+            {
+                description: "menu.contact.description",
+                title: "menu.contact.title",
+                href: "/contact"
+            },
+            {
+                description: "menu.information.description",
+                title: "menu.information.title",
+                href: "/"
+            },
+            {
+                description: "menu.compliance.description",
+                title: "menu.compliance.title",
+                href: "/"
             }
         ]
     },
     careers: {
-        key: "careers",
-        href:"/"
+        title: "careers",
+        href: "https://evo-engineering-gmbh.jobs.personio.de/"
     },
-    contact: { key: "contact", 
-    href:"/"
-}
+    contact: { title: "contact", href: "/contact" }
 }

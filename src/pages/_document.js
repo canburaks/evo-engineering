@@ -1,4 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from "next/document"
+import { getCssText } from "../styles/stitches.config"
 
 class MyDocument extends Document {
     render() {
@@ -88,6 +89,10 @@ class MyDocument extends Document {
                         rel="manifest"
                         href="/img/_evo/favicon/manifest.json"
                     />
+                    <style
+                        id="stitches"
+                        dangerouslySetInnerHTML={{ __html: getCssText() }}
+                    />
                 </Head>
                 <body className="font-inter relative">
                     <Main />
@@ -98,4 +103,4 @@ class MyDocument extends Document {
     }
 }
 
-export default MyDocument;
+export default MyDocument

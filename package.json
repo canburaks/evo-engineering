@@ -14,6 +14,16 @@
         "export": "next build && next export"
     },
     "dependencies": {
+        "@heroicons/react": "^1.0.6",
+        "@radix-ui/colors": "^0.1.8",
+        "@radix-ui/react-aspect-ratio": "^0.1.4",
+        "@radix-ui/react-dropdown-menu": "^0.1.6",
+        "@radix-ui/react-hover-card": "^0.1.5",
+        "@radix-ui/react-icons": "^1.1.1",
+        "@radix-ui/react-navigation-menu": "^0.1.2",
+        "@radix-ui/react-separator": "^0.1.4",
+        "@splidejs/react-splide": "^0.7.5",
+        "@stitches/react": "^1.2.8",
         "cloudinary-build-url": "^0.2.4",
         "clsx": "^1.1.1",
         "disqus-react": "^1.1.2",
@@ -26,6 +36,7 @@
         "react-dom": "17.0.2",
         "react-icons": "^4.3.1",
         "react-markdown": "^7.1.1",
+        "react-useanimations": "^2.0.8",
         "swiper": "^6.8.4",
         "webpack": "^5.53.0"
     },

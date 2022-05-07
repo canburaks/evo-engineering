@@ -23,12 +23,61 @@
   "ourValues": "Unsere Werte",
   "quality": "Qualität & Umwelt",
   "management": "Management-Team",
+  "menu": {
+    "about": {
+      "title": "Über uns",
+      "description": "Was Sie über EVO Engineering wissen möchten."
+    },
+    "visionMissionValues": {
+      "title": "Vision, Mission und Werte.",
+      "description": "Über unsere Vision, Mission und Werte."
+    },
+    "quality": {
+      "title": "Qualität",
+      "description": "Qualität und Standards folgen wir bei EVO Engineering."
+    },
+    "support": {
+      "title": "Unternehmen"
+    },
+    "information": {
+      "title": "Informationssicherheit",
+      "description": "Wie wir jede Art von Informationen behandeln"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Die Kontaktdaten."
+    },
+    "compliance": {
+      "title": "Compliance & Ethikkodex",
+      "description": "Der Ethik- und Compliance-Kodex von EVO Engineering."
+    }
+  },
   "pages": {
     "home": {
-      "metaTitle": "",
+      "metaTitle": "Elektrifizierung der nächsten Generation | EVO-Engineering",
       "metaDescription": "",
-      "title": "",
+      "title": "Elektrifizierung der nächsten Generation | EVO-Engineering",
       "slogan": "",
+      "featureSection": {
+        "title": "Wir elektrifizieren Mobilität. Effiziente, sichere und saubere Antriebe für jedermann.",
+        "description": "Als spezialisierter Automotive-Engineering-Partner unterstützen wir unsere Kunden und Partner bei der Entwicklung von Antrieben der Zukunft - weltweit, mit höchster Qualität, Effizienz und Sicherheit. ",
+        "value1": {
+          "title": "Spitzenleistungen",
+          "description": "Wir liefern erstklassige  Lösungen und sind ständig bestrebt, unser Know-how sowie die Qualität unserer Dienstleistungen zu verbessern und weiterzuentwickeln."
+        },
+        "value2": {
+          "title": "Respekt",
+          "description": "We treat all people equally open mindend and respectfully."
+        },
+        "value3": {
+          "title": "Leidenschaft",
+          "description": "Die hohe Qualität unserer Dienstleistungen erwächst aus der Leidenschaft für die Sache."
+        },
+        "value4": {
+          "title": "Nachhaltigkeit",
+          "description": "Für eine bessere Welt von morgen."
+        }
+      },
       "feature1": {
         "title": "Was wir tun?",
         "description": "Wir unterstützen unsere Kunden bei der Entwicklung zukünftiger Generationen elektrischer Antriebe in der Automobilindustrie."
@@ -39,12 +88,64 @@
       }
     },
     "contact": {
-      "metaTitle": "",
-      "metaDescription": ""
+      "metaTitle": "Kontakt | EVO Engineering GmbH",
+      "metaDescription": "Die Kontaktdaten der EVO Engineering GmbH",
+      "title": "Die Kontaktdaten der EVO Engineering GmbH",
+      "description": "Wir würden uns freuen, von Ihnen zu hören. Senden Sie uns eine E-Mail oder rufen Sie uns an.",
+      "tel": "<a rel='noopener nofollow' href='+498937458130'>+49 89 374 581 30</a>",
+      "fax": "<p>+49 89 374 581 32</p>",
+      "email": "<a rel='noopener nofollow' href='mailto:info@evo-e.com'>info@evo-e.com</a>",
+      "office": {
+        "title": "Die Anschrift",
+        "content": "<address>EVO Engineering GmbH <br/>Frankfurter Ring 105 <br/>80807 München <br/>Deutschland</address>"
+      },
+      "communication": {
+        "title": "Kontakt"
+      }
     },
     "about": {
-      "metaTitle": "",
-      "metaDescription": ""
+      "metaTitle": "Über uns | EVO Engineering",
+      "metaDescription": "",
+      "title": "Über uns",
+      "description": "We'd love to hear from you. Send us an email or call us.",
+      "vision": {
+        "title": "Vision",
+        "description": "Wir elektrifizieren Mobilität. Effiziente, sichere und saubere Antriebe für jedermann."
+      },
+      "mission": {
+        "title": "Mission",
+        "description": "Als spezialisierter Automotive-Engineering-Partner unterstützen wir unsere Kunden und Partner bei der Entwicklung von Antrieben der Zukunft - weltweit, mit höchster Qualität, Effizienz und Sicherheit."
+      },
+      "values": {
+        "title": "Unternehmenswerte",
+        "description": "",
+        "value1": {
+          "title": "Spitzenleistungen",
+          "description": "Wir liefern erstklassige Lösungen und sind ständig bestrebt, unser Know-how sowie die Qualität unserer Dienstleistungen zu verbessern und weiterzuentwickeln."
+        },
+        "value2": {
+          "title": "Respekt",
+          "description": "Wir behandeln alle Menschen mit Respekt und Offenheit."
+        },
+        "value3": {
+          "title": "Leidenschaft",
+          "description": "Die hohe Qualität unserer Dienstleistungen erwächst aus der Leidenschaft für die Sache."
+        },
+        "value4": {
+          "title": "Nachhaltigkeit",
+          "description": "Für eine bessere Welt von morgen."
+        }
+      }
+    },
+    "quality": {
+      "metaTitle": "Qualität | EVO Engineering GmbH",
+      "metaDescription": "Grundlage unseres Qualitätsmanagement-Systems (QMS) sind internationale Standards wie ISO 9001 sowie Kunden-, gesetzliche und andere Anforderungen.  ",
+      "title": "Qualität @ EVO Engineering",
+      "subtitle": "Wir sind 'Qualitäter' aus Überzeugung. ",
+      "p1": "Grundlage unseres Qualitätsmanagement-Systems (QMS) sind internationale Standards wie ISO 9001 sowie Kunden-, gesetzliche und andere Anforderungen.",
+      "p2": "Durch die Einführung eines Qualitätsmanagementsystems (QMS) von Anfang an wollen wir die Einhaltung und korrekte Umsetzung aller Qualitätsmanagementanforderungen sicherstellen.",
+      "p3": "Wir entwickeln unsere Kompetenzen kontinuierlich weiter, um unseren Kunden erstklassige Qualität bieten zu können und ihre Erwartungen zu erfüllen oder sogar zu übertreffen.",
+      "p4": "Die EVO-Geschäftsleitung verpflichtet sich, das QMS zu betreiben, aufrechtzuerhalten und kontinuierlich zu verbessern, und stelletsicher, dass diese Politik auf allen Ebenen der EVO-Mitarbeiter kommuniziert und umgesetzt wird."
     },
     "faq": {
       "metaTitle": "",

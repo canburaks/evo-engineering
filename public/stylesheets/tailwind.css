@@ -70,13 +70,13 @@ textarea:focus-visible {
 }
 
 .offcanvas-menu-wrap {
-    @apply before:absolute before:w-0 before:h-full before:top-0 before:right-0 before:bg-black before:opacity-60 before:z-10  before:ease-linear before:duration-[500ms] delay-[300ms];
+    @apply before:absolute before:w-0 before:h-full before:top-0 before:right-0 before:bg-black before:opacity-60 before:z-40  before:ease-linear before:duration-[500ms] delay-[300ms];
 }
 .offcanvas-menu-wrap.active {
     @apply before:w-full before:visible before:opacity-90;
 }
 .offcanvas-menu-wrap .offcanvas-menu {
-    @apply opacity-90 bg-white fixed top-0 right-[-300px] w-[300px] h-full ease-in-out duration-[450ms] delay-[350ms] p-5 z-20;
+    @apply opacity-90 bg-white fixed top-0 right-[-300px] w-[300px] h-full ease-in-out duration-[450ms] delay-[350ms] p-5 z-40;
 }
 .offcanvas-menu-wrap.active .offcanvas-menu {
     @apply right-0 opacity-100;
