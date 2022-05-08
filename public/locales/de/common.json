@@ -147,9 +147,27 @@
       "p3": "Wir entwickeln unsere Kompetenzen kontinuierlich weiter, um unseren Kunden erstklassige Qualität bieten zu können und ihre Erwartungen zu erfüllen oder sogar zu übertreffen.",
       "p4": "Die EVO-Geschäftsleitung verpflichtet sich, das QMS zu betreiben, aufrechtzuerhalten und kontinuierlich zu verbessern, und stelletsicher, dass diese Politik auf allen Ebenen der EVO-Mitarbeiter kommuniziert und umgesetzt wird."
     },
-    "faq": {
-      "metaTitle": "",
-      "metaDescription": ""
+    "compliance": {
+      "metaTitle": "Compliance | EVO Engineering GmbH",
+      "metaDescription": "Für den Erfolg unseres Unternehmens ist es von grundlegender Bedeutung, dass wir als Geschäftspartner, Lieferant, Kunde und als Arbeitgeber jederzeit fundierte Entscheidungen treffen.",
+      "title": "Compliance & Ethikkodex",
+      "description": "Compliance ist für uns keine leere Phrase, sie ist selbstverständliche Verpflichtung, jeden Tag.",
+      "content": {
+        "p1": "Compliance is not an empty phrase for us, it is a self-evident obligation, every day.",
+        "p2": "It is fundamental to the success of our company that we make well-grounded decisions at all times as business partners, suppliers, customers, and an employer. One basis for these decisions are",
+        "l1": "<li>Applicable laws</li><li><a href='https://www.unglobalcompact.org/what-is-gc/mission/principles' rel='nofollow noopener' target='_blank' title='the ten principles of the United Nations Global Compact'>The ten principles of the United Nations Global Compact</a> on human rights, labor, environmental responsibility and anti-corruption, and</li><li>Our corporate values</li>",
+        "p3": "All employees of EVO Engineering GmbH are obliged to comply with these rules.",
+        "p4": "Our employees' well-being is very important to us. They shall all have proper working conditions for their health and safety. We all deserve mutual respect.",
+        "p5": "EVO wants to provide jobs, that are free of discrimination and harassment based on gender, race, skin color, religion, age, nationality, disabilities, or sexual orientation. Neither bullying nor discrimination is tolerated.",
+        "p6": "Conflicts of interest shall be avoided, e.g by not hiring close relatives as direct subordinates. In case a potential conflict of interest is noticed, it is expected to be reported proactively, and each case is assessed case by case.",
+        "p7": "We do not tolerate corruption or bribery of any kind. It is prohibited to give or accept, any gifts or respective, which could impair the objective business decision making",
+        "p8": "Knowledge and information is our biggest asset, so we protect them as well as possible.",
+        "p9": "We never disclose any business secrets to anyone who is not entitled to that information.",
+        "p10": "Any business information, whether it is digital, physical, or spoken, is handled with care. All EVO employees adhere to strict guidelines, e.g. clear/clean desk/screen policy and information handling policy.",
+        "p11": "In case we get to know insider information, we use it only in a manner allowed by applicable laws.",
+        "p12": "We apply the specifications of EU-GDPR and local laws.",
+        "p13": "We expect corresponding policies and behavior from our partners, suppliers, and customers.<br />, Awareness and open communication are very important to us. So everybody is obliged to speak up if any violation of laws or this code of conduct is perceived and contact one&#39;s manager. We will protect whistle-blowers in accordance with applicable law."
+      }
     }
   }
 }

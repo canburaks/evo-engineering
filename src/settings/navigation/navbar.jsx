@@ -49,15 +49,15 @@ export const navbar = {
                 title: "menu.contact.title",
                 href: "/contact"
             },
-            {
-                description: "menu.information.description",
-                title: "menu.information.title",
-                href: "/"
-            },
+            // {
+            //     description: "menu.information.description",
+            //     title: "menu.information.title",
+            //     href: "/"
+            // },
             {
                 description: "menu.compliance.description",
                 title: "menu.compliance.title",
-                href: "/"
+                href: "/about-us/compliance"
             }
         ]
     },

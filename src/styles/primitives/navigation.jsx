@@ -476,6 +476,17 @@ export const MyNavigationMenu = () => {
                                                 .description
                                         )}
                                     </ContentListItem>
+                                    {/* <ContentListItem
+                                        title={t(
+                                            navbar.support.children[2].title
+                                        )}
+                                        href={navbar.support.children[2].href}
+                                    >
+                                        {t(
+                                            navbar.support.children[2]
+                                                .description
+                                        )}
+                                    </ContentListItem> */}
                                 </ListItem>
                                 <ContentListItemCallout2 />
                             </ContentList>

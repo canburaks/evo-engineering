@@ -40,7 +40,7 @@ export const Hero = ({ title, description }) => {
 
     return (
         <Box width={"full"} height="auto">
-            <AspectRatio.Root ratio={isMobile ? 0.66 : 16 / 9}>
+            <AspectRatio.Root ratio={isMobile ? 0.66 : 16 / 8}>
                 {!isMobile ? (
                     <Video
                         src={"/video/electrical-cars.mp4"}

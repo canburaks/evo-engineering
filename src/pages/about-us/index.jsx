@@ -1,9 +1,9 @@
 import React, { Fragment } from "react"
 import Head from "next/head"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import nextI18NextConfig from "../../next-i18next.config"
+import nextI18NextConfig from "../../../next-i18next.config"
 import { useTranslation } from "next-i18next"
-import { styled } from "../styles/stitches.config"
+import { styled } from "../../styles/stitches.config"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
 const StyledSeparator = styled(SeparatorPrimitive.Root, {
