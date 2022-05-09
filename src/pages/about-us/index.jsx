@@ -5,7 +5,13 @@ import nextI18NextConfig from "../../../next-i18next.config"
 import { useTranslation } from "next-i18next"
 import { styled } from "../../styles/stitches.config"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
-
+import {
+    LightningBoltIcon,
+    MagicWandIcon,
+    StarIcon,
+    GlobeIcon
+} from "@radix-ui/react-icons"
+import { ComplianceContent } from "./compliance"
 const StyledSeparator = styled(SeparatorPrimitive.Root, {
     backgroundColor: "#888",
     margin: "64px 0 32px 0",
@@ -26,7 +32,7 @@ const AboutPage = () => {
                 />
             </Head>
             <div className="bg-white">
-                <section className="bg-white dark:bg-gray-900">
+                <section className="bg-gray-900">
                     <div className="container px-6 py-10 mx-auto">
                         <div className="lg:flex lg:items-center">
                             <div className="w-full space-y-12 lg:w-1/2 ">
@@ -44,7 +50,7 @@ const AboutPage = () => {
                                 </div>
 
                                 <div className="md:flex md:items-start md:-mx-4">
-                                    <span className="inline-block p-2 text-orange-500 bg-blue-100 rounded-xl md:mx-4 dark:bg-orange-500"></span>
+                                    <span className="inline-block p-2 text-orange-500 bg-blue-100 rounded-xl md:mx-4 bg-orange-500"></span>
 
                                     <div className="mt-4 md:mx-4 md:mt-0">
                                         <h2
@@ -54,7 +60,7 @@ const AboutPage = () => {
                                             {t("pages.about.vision.title")}
                                         </h2>
 
-                                        <p className="mt-3 text-gray-500 dark:text-gray-300">
+                                        <p className="mt-3 text-gray-300">
                                             {t(
                                                 "pages.about.vision.description"
                                             )}
@@ -63,7 +69,7 @@ const AboutPage = () => {
                                 </div>
 
                                 <div className="md:flex md:items-start md:-mx-4">
-                                    <span className="inline-block p-2 text-orange-500 bg-blue-100 rounded-xl md:mx-4 dark:bg-orange-500"></span>
+                                    <span className="inline-block p-2 text-orange-500 bg-blue-100 rounded-xl md:mx-4 bg-orange-500"></span>
 
                                     <div className="mt-4 md:mx-4 md:mt-0">
                                         <h2
@@ -73,7 +79,7 @@ const AboutPage = () => {
                                             {t("pages.about.mission.title")}
                                         </h2>
 
-                                        <p className="mt-3 text-gray-500 dark:text-gray-300">
+                                        <p className="mt-3 text-gray-300">
                                             {t(
                                                 "pages.about.mission.description"
                                             )}
@@ -84,14 +90,14 @@ const AboutPage = () => {
 
                             <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
                                 <img
-                                    className="w-[28rem] h-[28rem] object-cover xl:w-[34rem] xl:h-[34rem] rounded-full"
-                                    src="/img/car-grid.webp"
+                                    className="w-[24rem] h-[24rem] object-cover xl:w-[28rem] xl:h-[28rem] rounded-full"
+                                    src="/img/contours-line.webp"
                                     alt="EVO Engineering electrical cars"
                                 />
                             </div>
                         </div>
 
-                        <StyledSeparator className="border-gray-200 my-12 dark:border-gray-700" />
+                        <StyledSeparator className="border-gray-200 my-12 border-gray-700" />
 
                         <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5"></div>
                     </div>
@@ -109,20 +115,7 @@ const AboutPage = () => {
                         <div className="grid grid-cols-1 gap-8  md:grid-cols-2">
                             <div className="mt-16">
                                 <div className="inline-block p-3 text-white bg-orange-600 rounded-lg">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                        />
-                                    </svg>
+                                    <StarIcon />
                                 </div>
 
                                 <div>
@@ -140,20 +133,7 @@ const AboutPage = () => {
 
                             <div className="mt-16">
                                 <div className="inline-block p-3 text-white bg-orange-600 rounded-lg">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                        />
-                                    </svg>
+                                    <LightningBoltIcon />
                                 </div>
 
                                 <div>
@@ -171,20 +151,7 @@ const AboutPage = () => {
 
                             <div className="mt-16">
                                 <div className="inline-block p-3 text-white bg-orange-600 rounded-lg">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                        />
-                                    </svg>
+                                    <MagicWandIcon />
                                 </div>
 
                                 <div>
@@ -202,20 +169,7 @@ const AboutPage = () => {
 
                             <div className="mt-16">
                                 <div className="inline-block p-3 text-white bg-orange-600 rounded-lg">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                        />
-                                    </svg>
+                                    <GlobeIcon />
                                 </div>
 
                                 <div>
@@ -232,6 +186,15 @@ const AboutPage = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="bg-white max-w-6xl mx-auto pt-12 px-4 sm:px-6 lg:px-8 pb-40">
+                    <h2
+                        className="text-3xl font-semibold text-gray-800 lg:text-5xl mt-12"
+                        id="compliance"
+                    >
+                        {t("pages.compliance.title")}
+                    </h2>
+                    <ComplianceContent />
                 </div>
             </div>
         </Fragment>

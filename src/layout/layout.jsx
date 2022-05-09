@@ -1,5 +1,5 @@
 import React, { Fragment } from "react"
-import { MyNavigationMenu } from "../styles/primitives/navigation"
+import { MyNavigationMenu } from "./navigation"
 import Footer from "./footer"
 
 export const Layout = ({ children }) => (

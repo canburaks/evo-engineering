@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { styled, keyframes, css } from "../stitches.config"
-import { Box } from "./box"
+import { styled, keyframes, css } from "../styles/stitches.config"
+import { Box } from "../styles/primitives/box"
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu"
 import { CaretDownIcon, HamburgerMenuIcon } from "@radix-ui/react-icons"
 import {
@@ -14,9 +14,9 @@ import {
     cyan,
     blackA,
     orange
-} from "../stitches.config"
+} from "../styles/stitches.config"
 import { useRouter } from "next/router"
-import { navbar } from "../../settings"
+import { navbar } from "../settings"
 import { useTranslation } from "next-i18next"
 import { FaBars } from "react-icons/fa"
 import { AiOutlineClose } from "react-icons/ai"
@@ -140,7 +140,17 @@ const StyledLink = styled(NavigationMenuPrimitive.Link, {
     display: "block",
     textDecoration: "none",
     fontSize: 15,
-    lineHeight: 1
+    lineHeight: 1,
+    variants: {
+        background: {
+            orange: {
+                background: `linear-gradient(135deg, ${orange.orange8} 0%, ${orange.orange11} 100%);`
+            },
+            green: {
+                background: `linear-gradient(135deg, ${teal.teal7} 0%, ${cyan.cyan11} 100%);`
+            }
+        }
+    }
 })
 
 const StyledContent = styled(NavigationMenuPrimitive.Content, {
@@ -236,7 +246,8 @@ const ContentList = styled("ul", {
             one: {
                 "@media only screen and (min-width: 600px)": {
                     width: 500,
-                    gridTemplateColumns: ".75fr 1fr"
+                    gridTemplateColumns: ".75fr 1fr",
+                    height: "100%"
                 }
             },
             two: {
@@ -251,12 +262,37 @@ const ContentList = styled("ul", {
                     gridAutoFlow: "column",
                     gridTemplateRows: "repeat(3, 1fr)"
                 }
+            },
+            four: {
+                "@media only screen and (min-width: 600px)": {
+                    width: 600,
+                    gridAutoFlow: "column",
+                    gridTemplateRows: "repeat(4, 1fr)",
+                    gridTemplateColumns: "0.75fr 1fr"
+                }
             }
         }
     }
 })
 
-export const ListItem = styled("li", {})
+export const ListItem = styled("li", {
+    variants: {
+        rowSpan: {
+            1: {
+                gridRow: "span 1"
+            },
+            2: {
+                gridRow: "span 2"
+            },
+            3: {
+                gridRow: "span 3"
+            },
+            4: {
+                gridRow: "span 4"
+            }
+        }
+    }
+})
 
 export const LinkTitle = styled("div", {
     fontWeight: 500,
@@ -283,9 +319,10 @@ const ContentListItem = React.forwardRef(
                     borderRadius: 6,
                     "&:hover": { backgroundColor: mauve.mauve3 }
                 }}
+                locale={props.locale}
             >
                 <LinkTitle>{title}</LinkTitle>
-                <LinkText>{children}</LinkText>
+                <LinkText css={{ fontSize: 14 }}>{children}</LinkText>
             </NavigationMenuLink>
         </ListItem>
     )
@@ -293,10 +330,11 @@ const ContentListItem = React.forwardRef(
 
 const ContentListItemCallout = React.forwardRef(
     ({ children, ...props }, forwardedRef) => (
-        <ListItem css={{ gridRow: "span 3" }}>
+        <ListItem rowSpan={props.rowSpan} title={props.imageTitle}>
             <NavigationMenuLink
                 {...props}
-                href="/"
+                href={props.href}
+                rel={props.rel || undefined}
                 ref={forwardedRef}
                 css={{
                     display: "flex",
@@ -304,18 +342,20 @@ const ContentListItemCallout = React.forwardRef(
                     flexDirection: "column",
                     width: "300",
                     height: "100%",
-                    background: `linear-gradient(135deg, ${orange.orange8} 0%, ${orange.orange10} 100%);`,
                     borderRadius: 6,
                     padding: 0
                 }}
+                background={props.background ? props.background : "green"}
+                locale={props.locale}
             >
                 <Image
-                    src="/img/_evo/green-energy.webp"
+                    src={props.src}
                     //width="100%"
-                    width="300"
-                    height="400"
+                    width={props.imageWidth || "300"}
+                    height={props.imageHeight || "400"}
                     //height="auto"
                     layout="responsive"
+                    css={{ borderRadius: 6 }}
                     //objectFit
                 />
             </NavigationMenuLink>
@@ -327,7 +367,7 @@ const ContentListItemCallout2 = React.forwardRef(
         <ListItem css={{ gridRow: "span 3" }}>
             <NavigationMenuLink
                 {...props}
-                href="/"
+                href={props.href}
                 ref={forwardedRef}
                 css={{
                     display: "flex",
@@ -341,7 +381,7 @@ const ContentListItemCallout2 = React.forwardRef(
                 }}
             >
                 <Image
-                    src="/img/charge-station.webp"
+                    src={props.src}
                     //width="100%"
                     width="300"
                     height="400"
@@ -359,7 +399,7 @@ const ViewportPosition = styled("div", {
     justifyContent: "center",
     width: "100%",
     top: "100%",
-    left: 0,
+    left: -60,
     perspective: "2000px"
 })
 
@@ -380,13 +420,13 @@ export const MyNavigationMenu = () => {
             <NavigationMenu css={{ background: "#ffffff" }}>
                 <NavigationMenuList css={{ zIndex: offcanvas ? 0 : 20 }}>
                     <NavigationMenuItem>
-                        <Link href="/">
+                        <Link href="/" locale={router.locale}>
                             <a className="inline-block align-middle leading-[1]">
                                 <Image
                                     src="/img/_evo/evo-e-logo.webp"
                                     alt="Logo"
-                                    width={120}
-                                    height={51}
+                                    width={160}
+                                    height={68}
                                 />
                             </a>
                         </Link>
@@ -399,23 +439,53 @@ export const MyNavigationMenu = () => {
                         "@md": "visible"
                     }}
                 >
-                    <NavigationMenuItem>
-                        <NavigationMenuLink>
-                            <Link href="/">
-                                <a className="inline-block align-middle leading-[1]">
-                                    {t(navbar.home.key)}
-                                </a>
-                            </Link>
+                    <NavigationMenuItem
+                        css={{ paddingLeft: 8, marginRight: 20 }}
+                    >
+                        <NavigationMenuLink
+                            css={{
+                                ...itemStyles,
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "space-between",
+                                gap: 2,
+                                marginRight: 4
+                            }}
+                            locale={router.locale}
+                            href="/"
+                        >
+                            <a className="inline-block align-middle leading-[1]">
+                                {t(navbar.home.key)}
+                            </a>
                         </NavigationMenuLink>
                     </NavigationMenuItem>
+
                     <NavigationMenuItem>
-                        <NavigationMenuLink
-                            href={navbar.careers.href}
-                            rel="nofollow noopener"
-                            target="_blank"
-                        >
+                        <NavigationMenuTrigger>
                             {t(navbar.careers.title)}
-                        </NavigationMenuLink>
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                            <ContentList layout="one">
+                                <ContentListItemCallout
+                                    rowSpan={1}
+                                    src={"/img/green-graphics.webp"}
+                                    imageWidth="350"
+                                    imageHeight="200"
+                                    imageTitle={t(
+                                        navbar.careers.children[0].description
+                                    )}
+                                    href={navbar.careers.children[0].href}
+                                    locale={router.locale}
+                                />
+                                <ContentListItem
+                                    locale={router.locale}
+                                    href={navbar.careers.children[0].href}
+                                    title={t(navbar.careers.children[0].title)}
+                                >
+                                    {t(navbar.careers.children[0].description)}
+                                </ContentListItem>
+                            </ContentList>
+                        </NavigationMenuContent>
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
@@ -423,25 +493,46 @@ export const MyNavigationMenu = () => {
                             {t(navbar.about.children[0].title)}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <ContentList layout="one">
-                                <ContentListItemCallout />
+                            <ContentList layout="four">
+                                <ContentListItemCallout
+                                    src={"/img/charge-station.webp"}
+                                    href={navbar.about.children[0].href}
+                                    rel={navbar.about.children[0].rel}
+                                    imageWidth="300"
+                                    imageHeight="400"
+                                    imageTitle={t(
+                                        navbar.about.children[0].description
+                                    )}
+                                    rowSpan={4}
+                                    locale={router.locale}
+                                />
                                 <ContentListItem
+                                    locale={router.locale}
                                     href={navbar.about.children[0].href}
                                     title={t(navbar.about.children[0].title)}
                                 >
                                     {t(navbar.about.children[0].description)}
                                 </ContentListItem>
                                 <ContentListItem
+                                    locale={router.locale}
                                     href={navbar.about.children[1].href}
                                     title={t(navbar.about.children[1].title)}
                                 >
-                                    {t(navbar.about.children[1].description)}
+                                    {t(navbar.about.children[0].description)}
                                 </ContentListItem>
                                 <ContentListItem
+                                    locale={router.locale}
                                     href={navbar.about.children[2].href}
                                     title={t(navbar.about.children[2].title)}
                                 >
-                                    {t(navbar.about.children[2].description)}
+                                    {t(navbar.about.children[0].description)}
+                                </ContentListItem>
+                                <ContentListItem
+                                    locale={router.locale}
+                                    href={navbar.about.children[3].href}
+                                    title={t(navbar.about.children[3].title)}
+                                >
+                                    {t(navbar.about.children[0].description)}
                                 </ContentListItem>
                             </ContentList>
                         </NavigationMenuContent>
@@ -452,43 +543,25 @@ export const MyNavigationMenu = () => {
                             {t(navbar.support.title)}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
-                            <ContentList layout="two">
-                                <ListItem css={{ gridRow: "span 3" }}>
-                                    <ContentListItem
-                                        title={t(
-                                            navbar.support.children[0].title
-                                        )}
-                                        href={navbar.support.children[0].href}
-                                    >
-                                        {t(
-                                            navbar.support.children[0]
-                                                .description
-                                        )}
-                                    </ContentListItem>
-                                    <ContentListItem
-                                        title={t(
-                                            navbar.support.children[1].title
-                                        )}
-                                        href={navbar.support.children[1].href}
-                                    >
-                                        {t(
-                                            navbar.support.children[1]
-                                                .description
-                                        )}
-                                    </ContentListItem>
-                                    {/* <ContentListItem
-                                        title={t(
-                                            navbar.support.children[2].title
-                                        )}
-                                        href={navbar.support.children[2].href}
-                                    >
-                                        {t(
-                                            navbar.support.children[2]
-                                                .description
-                                        )}
-                                    </ContentListItem> */}
-                                </ListItem>
-                                <ContentListItemCallout2 />
+                            <ContentList layout="one">
+                                <ContentListItemCallout
+                                    locale={router.locale}
+                                    rowSpan={1}
+                                    src={"/img/green-car.jpg"}
+                                    imageWidth="350"
+                                    imageHeight="200"
+                                    imageTitle={t(
+                                        navbar.support.children[0].description
+                                    )}
+                                    href={navbar.support.children[0].href}
+                                />
+                                <ContentListItem
+                                    locale={router.locale}
+                                    href={navbar.support.children[0].href}
+                                    title={t(navbar.support.children[0].title)}
+                                >
+                                    {t(navbar.support.children[0].description)}
+                                </ContentListItem>
                             </ContentList>
                         </NavigationMenuContent>
                     </NavigationMenuItem>

@@ -19,10 +19,7 @@ import { site, s, navbar } from "../settings"
 import { useTranslation } from "next-i18next"
 import Footer from "../layout/footer"
 import { Box } from "../styles/primitives"
-import {
-    MyNavigationMenu,
-    NavigationMenuLink
-} from "../styles/primitives/navigation"
+
 import { styled, css } from "../styles/stitches.config"
 import { useRouter } from "next/router"
 import { FeatureColorful } from "../components/feature-colorful"

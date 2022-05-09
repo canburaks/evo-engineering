@@ -45,11 +45,15 @@
     },
     "contact": {
       "title": "Kontakt",
-      "description": "Die Kontaktdaten."
+      "description": "Unsere Kontaktdaten. Wir würden uns freuen, von Ihnen zu hören."
     },
     "compliance": {
       "title": "Compliance & Ethikkodex",
       "description": "Der Ethik- und Compliance-Kodex von EVO Engineering."
+    },
+    "careers": {
+      "title": "Wir stellen ein!",
+      "description": "Wir stellen ein! Sie können die offenen Stellen einsehen."
     }
   },
   "pages": {
@@ -67,7 +71,7 @@
         },
         "value2": {
           "title": "Respekt",
-          "description": "We treat all people equally open mindend and respectfully."
+          "description": "Wir behandeln alle Menschen mit Respekt und Offenheit."
         },
         "value3": {
           "title": "Leidenschaft",
@@ -96,7 +100,7 @@
       "fax": "<p>+49 89 374 581 32</p>",
       "email": "<a rel='noopener nofollow' href='mailto:info@evo-e.com'>info@evo-e.com</a>",
       "office": {
-        "title": "Die Anschrift",
+        "title": "Office",
         "content": "<address>EVO Engineering GmbH <br/>Frankfurter Ring 105 <br/>80807 München <br/>Deutschland</address>"
       },
       "communication": {
@@ -107,7 +111,7 @@
       "metaTitle": "Über uns | EVO Engineering",
       "metaDescription": "",
       "title": "Über uns",
-      "description": "We'd love to hear from you. Send us an email or call us.",
+      "description": "Wir würden uns freuen, von Ihnen zu hören. Senden Sie uns eine E-Mail oder rufen Sie uns an.",
       "vision": {
         "title": "Vision",
         "description": "Wir elektrifizieren Mobilität. Effiziente, sichere und saubere Antriebe für jedermann."

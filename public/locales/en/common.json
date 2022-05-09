@@ -45,11 +45,15 @@
     },
     "contact": {
       "title": "Contact",
-      "description": "The contact details."
+      "description": "Our contact details. We'd love to hear from you."
     },
     "compliance": {
       "title": "Compliance & Code of Ethics",
       "description": "The code of ethics and compliance of EVO Engineering."
+    },
+    "careers": {
+      "title": "We are hiring!",
+      "description": "We are hiring! If you are looking for a new challenge, you can view the open positions"
     }
   },
   "pages": {

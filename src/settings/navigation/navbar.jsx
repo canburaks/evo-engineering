@@ -20,24 +20,9 @@ export const navbar = {
                 href: "/about-us#quality"
             },
             {
-                title: "ourMission",
-                href: "/about-us#mission"
-            },
-            {
-                title: "ourVision",
-                href: "/about-us#vision"
-            },
-            {
-                title: "ourValues",
-                href: "/about-us#values"
-            },
-            {
-                title: "quality",
-                href: "/about-us/quality"
-            },
-            {
-                title: "management",
-                href: "/"
+                description: "menu.compliance.description",
+                title: "menu.compliance.title",
+                href: "/about-us/compliance"
             }
         ]
     },
@@ -48,22 +33,20 @@ export const navbar = {
                 description: "menu.contact.description",
                 title: "menu.contact.title",
                 href: "/contact"
-            },
-            // {
-            //     description: "menu.information.description",
-            //     title: "menu.information.title",
-            //     href: "/"
-            // },
-            {
-                description: "menu.compliance.description",
-                title: "menu.compliance.title",
-                href: "/about-us/compliance"
             }
         ]
     },
     careers: {
         title: "careers",
-        href: "https://evo-engineering-gmbh.jobs.personio.de/"
+        href: "https://evo-engineering-gmbh.jobs.personio.de/",
+        children: [
+            {
+                title: "menu.careers.title",
+                description: "menu.careers.description",
+                href: "https://evo-engineering-gmbh.jobs.personio.de/",
+                rel: "nofollow noopener"
+            }
+        ]
     },
     contact: { title: "contact", href: "/contact" }
 }

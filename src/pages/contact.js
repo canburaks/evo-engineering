@@ -127,7 +127,7 @@ function ContactPage(props) {
                     <StyledSeparator css={{ backgroundColor: "#ccc" }} />
                     <div className="flex flex-col items-center p-12">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10639.827933935963!2d11.5848851!3d48.1881803!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa224758fc978225d!2sEVO%20Engineering%20GmbH!5e0!3m2!1str!2str!4v1651931998398!5m2!1str!2str"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5319.913998109177!2d11.584885!3d48.18818!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa224758fc978225d!2sEVO%20Engineering%20GmbH!5e0!3m2!1sde!2str!4v1652131992150!5m2!1sde!2str"
                             width={size.width}
                             height={size.height}
                             allowFullScreen=""
