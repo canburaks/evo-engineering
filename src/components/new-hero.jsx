@@ -12,7 +12,8 @@ import image3 from "../../public/img/_evo/slid/electrica-car-units3.jpg"
 const AspectRatio = AspectRatioPrimitive
 
 const Overlay = styled("div", {
-    backgroundColor: "rgba(23,23,23,0.75)",
+    //backgroundColor: "rgba(23,23,23,0.75)",
+    background:"linear-gradient(0deg, rgba(0,0,0,0.7049413515406162) 0%, rgba(0,0,0,0.5004595588235294) 35%, rgba(0,0,0,0.05228028711484589) 100%);",
     position: "absolute",
     top: 0,
     left: 0,
@@ -43,7 +44,7 @@ export const Hero = ({ title, description }) => {
             <AspectRatio.Root ratio={isMobile ? 0.66 : 16 / 8}>
                 {!isMobile ? (
                     <Video
-                        src={"/video/electrical-cars.mp4"}
+                        src={"/video/evo.mp4"}
                         type="video/mp4"
                         autoPlay
                         loop
@@ -55,9 +56,9 @@ export const Hero = ({ title, description }) => {
                         className="my-carousel"
                         options={{
                             rewind: true,
-                            easing:"ease-in-out",
+                            easing: "ease-in-out",
                             drag: "free",
-                            autoplay:true
+                            autoplay: true
                         }}
                     >
                         <SplideSlide>
@@ -72,7 +73,7 @@ export const Hero = ({ title, description }) => {
                     </Splide>
                 )}
                 <Overlay>
-                    <InfoBox direction="column">
+                    <InfoBox direction="column" justify="end">
                         <Title
                             screen={{
                                 "@initial": "mobile",
@@ -81,9 +82,19 @@ export const Hero = ({ title, description }) => {
                             }}
                             className="bg-clip-text animate-text-shimmer bg-[linear-gradient(110deg,#e2e8f0,45%,#1e293b,55%,#e2e8f0)] bg-[length:250%_100%]"
                         >
-                            {title}
+                            <div className="text-4xl md:text-5xl lg:text-6xl max-w-full animate-text-shimmer bg-clip-text text-transparent bg-[linear-gradient(110deg,#e2e8f0,45%,#1e293b,55%,#e2e8f0)] bg-[length:250%_100%]">
+                                {title}
+                            </div>
                         </Title>
-                        <Description>{description}</Description>
+                        {/*<Description
+                            screen={{
+                                "@initial": "mobile",
+                                "@sm": "tablet",
+                                "@md": "desktop"
+                            }}
+                        >
+                            {description}
+                        </Description> */}
                     </InfoBox>
                 </Overlay>
             </AspectRatio.Root>
@@ -103,13 +114,16 @@ const Title = styled("h1", {
     variants: {
         screen: {
             mobile: {
-                fontSize: 32
+                fontSize: 32,
+                textAlign: "center"
             },
             tablet: {
-                fontSize: 44
+                fontSize: 44,
+                textAlign: "center"
             },
             desktop: {
-                fontSize: 56
+                fontSize: 56,
+                textAlign: "center"
             }
         }
     },
@@ -125,7 +139,20 @@ const Title = styled("h1", {
 const Description = styled("p", {
     marginTop: 16,
     color: "#fefefe",
-    fontSize: 24,
+    fontSize: 20,
+    variants: {
+        screen: {
+            mobile: {
+                fontSize: 16
+            },
+            tablet: {
+                fontSize: 18
+            },
+            desktop: {
+                fontSize: 20
+            }
+        }
+    },
     willChange: "transform, opacity",
     animationDuration: "1000ms",
     animationDelay: "1500ms",
@@ -143,9 +170,9 @@ const InfoBox = styled(Box, {
     justifyContent: "flex-end",
     height: "100%",
     margin: "0 auto",
-    width:"100%",
+    width: "100%",
     "@initial": { maxWidth: "90%", padding: "1rem" },
     "@sm": { maxWidth: "90%", padding: "2rem" },
-    "@md": { maxWidth: "80rem", padding: "4rem" },
-    bottom: 96
+    "@md": { maxWidth: "80rem", padding: "3rem" },
+    bottom: 64
 })

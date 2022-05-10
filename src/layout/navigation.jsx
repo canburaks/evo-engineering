@@ -68,7 +68,7 @@ const StyledMenu = styled(NavigationMenuPrimitive.Root, {
     alignItems: "center",
     width: "100vw",
     zIndex: 30,
-    padding: "8px 32px"
+    padding: "4px 24px"
 })
 
 const StyledList = styled(NavigationMenuPrimitive.List, {
@@ -309,7 +309,7 @@ export const LinkText = styled("p", {
 })
 
 const ContentListItem = React.forwardRef(
-    ({ children, title, ...props }, forwardedRef) => (
+    ({ children, title, href, ...props }, forwardedRef) => (
         <ListItem>
             <NavigationMenuLink
                 {...props}
@@ -319,10 +319,13 @@ const ContentListItem = React.forwardRef(
                     borderRadius: 6,
                     "&:hover": { backgroundColor: mauve.mauve3 }
                 }}
-                locale={props.locale}
             >
-                <LinkTitle>{title}</LinkTitle>
-                <LinkText css={{ fontSize: 14 }}>{children}</LinkText>
+                <Link href={href}>
+                    <a>
+                        <LinkTitle>{title}</LinkTitle>
+                        <LinkText css={{ fontSize: 14 }}>{children}</LinkText>
+                    </a>
+                </Link>
             </NavigationMenuLink>
         </ListItem>
     )
@@ -333,8 +336,6 @@ const ContentListItemCallout = React.forwardRef(
         <ListItem rowSpan={props.rowSpan} title={props.imageTitle}>
             <NavigationMenuLink
                 {...props}
-                href={props.href}
-                rel={props.rel || undefined}
                 ref={forwardedRef}
                 css={{
                     display: "flex",
@@ -346,18 +347,21 @@ const ContentListItemCallout = React.forwardRef(
                     padding: 0
                 }}
                 background={props.background ? props.background : "green"}
-                locale={props.locale}
             >
-                <Image
-                    src={props.src}
-                    //width="100%"
-                    width={props.imageWidth || "300"}
-                    height={props.imageHeight || "400"}
-                    //height="auto"
-                    layout="responsive"
-                    css={{ borderRadius: 6 }}
-                    //objectFit
-                />
+                <Link href={props.href} rel={props.rel || undefined}>
+                    <a>
+                        <Image
+                            src={props.src}
+                            //width="100%"
+                            width={props.imageWidth || "300"}
+                            height={props.imageHeight || "400"}
+                            //height="auto"
+                            layout="responsive"
+                            css={{ borderRadius: 6 }}
+                            //objectFit
+                        />
+                    </a>
+                </Link>
             </NavigationMenuLink>
         </ListItem>
     )
@@ -420,14 +424,17 @@ export const MyNavigationMenu = () => {
             <NavigationMenu css={{ background: "#ffffff" }}>
                 <NavigationMenuList css={{ zIndex: offcanvas ? 0 : 20 }}>
                     <NavigationMenuItem>
-                        <Link href="/" locale={router.locale}>
+                        <Link href="/">
                             <a className="inline-block align-middle leading-[1]">
                                 <Image
                                     src="/img/_evo/evo-e-logo.webp"
                                     alt="Logo"
-                                    width={160}
-                                    height={68}
+                                    width={200}
+                                    height={85}
                                 />
+                                <p className="hidden absolute left-0 -bottom-2 text-[12px] w-[80vw]">
+                                    NEXT GENERATION ELECTRIFICATION
+                                </p>
                             </a>
                         </Link>
                     </NavigationMenuItem>
@@ -451,41 +458,12 @@ export const MyNavigationMenu = () => {
                                 gap: 2,
                                 marginRight: 4
                             }}
-                            locale={router.locale}
                             href="/"
                         >
                             <a className="inline-block align-middle leading-[1]">
                                 {t(navbar.home.key)}
                             </a>
                         </NavigationMenuLink>
-                    </NavigationMenuItem>
-
-                    <NavigationMenuItem>
-                        <NavigationMenuTrigger>
-                            {t(navbar.careers.title)}
-                        </NavigationMenuTrigger>
-                        <NavigationMenuContent>
-                            <ContentList layout="one">
-                                <ContentListItemCallout
-                                    rowSpan={1}
-                                    src={"/img/green-graphics.webp"}
-                                    imageWidth="350"
-                                    imageHeight="200"
-                                    imageTitle={t(
-                                        navbar.careers.children[0].description
-                                    )}
-                                    href={navbar.careers.children[0].href}
-                                    locale={router.locale}
-                                />
-                                <ContentListItem
-                                    locale={router.locale}
-                                    href={navbar.careers.children[0].href}
-                                    title={t(navbar.careers.children[0].title)}
-                                >
-                                    {t(navbar.careers.children[0].description)}
-                                </ContentListItem>
-                            </ContentList>
-                        </NavigationMenuContent>
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
@@ -504,35 +482,56 @@ export const MyNavigationMenu = () => {
                                         navbar.about.children[0].description
                                     )}
                                     rowSpan={4}
-                                    locale={router.locale}
                                 />
                                 <ContentListItem
-                                    locale={router.locale}
                                     href={navbar.about.children[0].href}
                                     title={t(navbar.about.children[0].title)}
                                 >
                                     {t(navbar.about.children[0].description)}
                                 </ContentListItem>
                                 <ContentListItem
-                                    locale={router.locale}
                                     href={navbar.about.children[1].href}
                                     title={t(navbar.about.children[1].title)}
                                 >
                                     {t(navbar.about.children[0].description)}
                                 </ContentListItem>
                                 <ContentListItem
-                                    locale={router.locale}
                                     href={navbar.about.children[2].href}
                                     title={t(navbar.about.children[2].title)}
                                 >
                                     {t(navbar.about.children[0].description)}
                                 </ContentListItem>
                                 <ContentListItem
-                                    locale={router.locale}
                                     href={navbar.about.children[3].href}
                                     title={t(navbar.about.children[3].title)}
                                 >
                                     {t(navbar.about.children[0].description)}
+                                </ContentListItem>
+                            </ContentList>
+                        </NavigationMenuContent>
+                    </NavigationMenuItem>
+
+                    <NavigationMenuItem>
+                        <NavigationMenuTrigger>
+                            {t(navbar.careers.title)}
+                        </NavigationMenuTrigger>
+                        <NavigationMenuContent>
+                            <ContentList layout="one">
+                                <ContentListItemCallout
+                                    rowSpan={1}
+                                    src={"/img/green-graphics.webp"}
+                                    imageWidth="350"
+                                    imageHeight="200"
+                                    imageTitle={t(
+                                        navbar.careers.children[0].description
+                                    )}
+                                    href={navbar.careers.children[0].href}
+                                />
+                                <ContentListItem
+                                    href={navbar.careers.children[0].href}
+                                    title={t(navbar.careers.children[0].title)}
+                                >
+                                    {t(navbar.careers.children[0].description)}
                                 </ContentListItem>
                             </ContentList>
                         </NavigationMenuContent>
@@ -545,7 +544,6 @@ export const MyNavigationMenu = () => {
                         <NavigationMenuContent>
                             <ContentList layout="one">
                                 <ContentListItemCallout
-                                    locale={router.locale}
                                     rowSpan={1}
                                     src={"/img/green-car.jpg"}
                                     imageWidth="350"
@@ -556,7 +554,6 @@ export const MyNavigationMenu = () => {
                                     href={navbar.support.children[0].href}
                                 />
                                 <ContentListItem
-                                    locale={router.locale}
                                     href={navbar.support.children[0].href}
                                     title={t(navbar.support.children[0].title)}
                                 >
@@ -579,13 +576,21 @@ export const MyNavigationMenu = () => {
                         onClick={switchToEnglish}
                         css={{ cursor: "pointer" }}
                     >
-                        EN
+                        <FlagUS
+                            locale={
+                                router.locale === "en" ? "active" : "inactive"
+                            }
+                        />
                     </NavigationMenuLink>
                     <NavigationMenuLink
                         onClick={switchToDeutsch}
                         css={{ cursor: "pointer" }}
                     >
-                        DE
+                        <FlagDE
+                            locale={
+                                router.locale === "de" ? "active" : "inactive"
+                            }
+                        />
                     </NavigationMenuLink>
                 </NavigationMenuList>
 
@@ -625,10 +630,10 @@ export const MyNavigationMenu = () => {
                                 <Link href="/">
                                     <a>
                                         <Image
-                                            src="/img/_evo/evo-engineering256x256.png"
+                                            src="/img/_evo/evo-e-logo.webp"
                                             alt="Logo"
-                                            width={200}
-                                            height={200}
+                                            width={220}
+                                            height={94}
                                         />
                                     </a>
                                 </Link>
@@ -658,7 +663,7 @@ export const MyNavigationMenu = () => {
                             return (
                                 <li key={index} className={"drawer-link"}>
                                     <Link href={item.href}>
-                                        <a>{i18n.t(item.title)}</a>
+                                        <a>{i18n.t(item.key)}</a>
                                     </Link>
                                 </li>
                             )
@@ -669,5 +674,73 @@ export const MyNavigationMenu = () => {
         </Fragment>
     )
 }
+
+const Flag = styled("svg", {
+    width: 20,
+    height: 15,
+    variants: {
+        locale: {
+            active: {
+                opacity: 1
+            },
+            inactive: {
+                opacity: 0.5
+            }
+        }
+    }
+})
+const FlagUS = () => (
+    <div title="English">
+        <Flag
+            xmlns="http://www.w3.org/2000/svg"
+            width="120"
+            height="90"
+            fill="none"
+            viewBox="0 0 120 90"
+            title="English"
+        >
+            <g
+                fillRule="evenodd"
+                clipPath="url(#clip0_33_6)"
+                clipRule="evenodd"
+            >
+                <path
+                    fill="#BD3D44"
+                    d="M0 0h171v6.926H0V0zm0 13.852h171v6.925H0v-6.925zm0 13.834h171v6.943H0v-6.943zm0 13.851h171v6.926H0v-6.926zM0 55.39h171v6.925H0V55.39zm0 13.834h171v6.925H0v-6.925zm0 13.851h171V90H0v-6.926z"
+                ></path>
+                <path
+                    fill="#fff"
+                    d="M0 6.926h171v6.926H0V6.926zm0 13.851h171v6.909H0v-6.909zm0 13.834h171v6.926H0v-6.926zm0 13.852h171v6.926H0v-6.926zm0 13.852h171v6.925H0v-6.925zm0 13.833h171v6.926H0v-6.926z"
+                ></path>
+                <path fill="#192F5D" d="M0 0h68.397v48.463H0V0z"></path>
+                <path
+                    fill="#fff"
+                    d="M5.695 2.074l.633 1.916h2.004L6.715 5.168l.615 1.934-1.635-1.196-1.617 1.178.615-1.916L3.06 3.99h2.039l.597-1.916zm11.409 0l.615 1.916h2.021l-1.634 1.178.615 1.934-1.617-1.196-1.635 1.178.615-1.916-1.617-1.178h2.004l.633-1.916zm11.39 0l.633 1.916h1.986l-1.617 1.178.615 1.934-1.634-1.196-1.618 1.178.616-1.916L25.84 3.99h2.021l.633-1.916zm11.408 0l.616 1.916h2.021l-1.635 1.178.633 1.934-1.635-1.196-1.634 1.178.632-1.916-1.634-1.178h2.004l.632-1.916zm11.391 0l.633 1.916h2.004l-1.617 1.178.615 1.934-1.635-1.196-1.617 1.178.615-1.916-1.617-1.178h2.004l.615-1.916zm11.408 0l.615 1.916h2.022l-1.635 1.178.633 1.934L62.7 5.906l-1.635 1.178.633-1.916-1.634-1.178h2.02l.616-1.916zM11.408 6.926l.615 1.916h2.022L12.41 10.02l.598 1.915-1.582-1.177-1.635 1.178.58-1.916L8.79 8.841h2.004l.615-1.916zm11.39 0l.634 1.916h2.004L23.8 10.02l.633 1.915-1.635-1.177-1.635 1.178.633-1.916-1.635-1.178h2.022l.615-1.916zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.915-1.617-1.177-1.635 1.178.615-1.916-1.617-1.178h2.004l.633-1.916zm11.39 0l.633 1.916h2.004L46.6 10.02l.632 1.915-1.634-1.177-1.617 1.178.615-1.916-1.635-1.178H45l.598-1.916zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.915-1.617-1.177-1.635 1.178.615-1.916-1.617-1.178h2.004l.633-1.916zM5.696 11.76l.632 1.95h2.004L6.715 14.89l.615 1.916-1.635-1.196-1.617 1.196.615-1.934-1.634-1.178h2.039l.597-1.933zm11.408 0l.615 1.933h2.021l-1.634 1.178.615 1.916-1.617-1.195-1.635 1.195.615-1.933-1.617-1.178h2.004l.633-1.916zm11.39 0l.633 1.933h1.986l-1.617 1.178.615 1.916-1.634-1.195-1.618 1.195.616-1.933-1.635-1.178h2.021l.633-1.916zm11.408 0l.616 1.933h2.021l-1.635 1.178.633 1.916-1.635-1.195-1.634 1.195.632-1.933-1.634-1.178h2.004l.632-1.916zm11.391 0l.633 1.933h2.004l-1.617 1.178.615 1.916-1.635-1.195-1.617 1.195.615-1.933-1.617-1.178h2.004l.615-1.916zm11.408 0l.615 1.933h2.022l-1.635 1.178.633 1.916-1.635-1.195-1.635 1.195.633-1.933-1.634-1.178h2.02l.616-1.916zM11.408 16.61l.615 1.916h2.022l-1.635 1.178.615 1.934-1.617-1.196-1.635 1.178.616-1.916-1.618-1.178h2.004l.633-1.916zm11.39 0l.634 1.916h2.004L23.8 19.705l.633 1.934-1.635-1.196-1.635 1.178.633-1.916-1.635-1.178h2.022l.615-1.916zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.934-1.617-1.196-1.635 1.178.615-1.916-1.617-1.178h2.004l.633-1.916zm11.39 0l.633 1.916h2.004l-1.617 1.178.615 1.934-1.634-1.196-1.617 1.178.615-1.916-1.635-1.178H45l.598-1.916zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.934-1.617-1.196-1.635 1.178.615-1.916-1.617-1.178h2.004l.633-1.916zm-51.31 4.852l.632 1.916h2.004l-1.617 1.178.615 1.933-1.635-1.195-1.617 1.178.615-1.916-1.634-1.178h2.039l.597-1.916zm11.408 0l.615 1.916h2.021l-1.634 1.178.615 1.916-1.617-1.178-1.635 1.178.615-1.916-1.617-1.178h2.004l.633-1.916zm11.39 0l.633 1.916h1.986l-1.617 1.178.615 1.933-1.634-1.195-1.618 1.178.616-1.916-1.635-1.178h2.021l.633-1.916zm11.408 0l.616 1.916h2.021l-1.635 1.178.633 1.933-1.635-1.195-1.634 1.178.632-1.916-1.634-1.178h2.004l.632-1.916zm11.391 0l.633 1.916h2.004l-1.617 1.178.615 1.933-1.635-1.195-1.617 1.178.615-1.916-1.617-1.178h2.004l.615-1.916zm11.408 0l.615 1.916h2.022l-1.635 1.178.633 1.933-1.635-1.195-1.635 1.178.633-1.916-1.634-1.178h2.02l.616-1.916zm-51.293 4.851l.615 1.916h2.022l-1.635 1.178.615 1.916-1.617-1.195-1.635 1.195.616-1.933-1.618-1.178h2.004l.633-1.899zm11.39 0l.634 1.916h2.004L23.8 29.409l.633 1.916-1.635-1.195-1.635 1.195.633-1.933-1.635-1.178h2.022l.615-1.899zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.916-1.617-1.195-1.635 1.195.615-1.933-1.617-1.178h2.004l.633-1.899zm11.39 0l.633 1.916h2.004l-1.617 1.178.615 1.916-1.634-1.195-1.617 1.195.615-1.933-1.635-1.178H45l.598-1.899zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.916-1.617-1.195-1.635 1.195.615-1.933-1.617-1.178h2.004l.633-1.899zm-51.31 4.834l.632 1.934h2.004L6.715 34.26l.615 1.898-1.635-1.178-1.617 1.178.615-1.916-1.634-1.178h2.039l.597-1.916zm11.408 0l.615 1.934h2.021l-1.634 1.178.632 1.898-1.634-1.178-1.635 1.178.633-1.916-1.635-1.178h2.004l.633-1.916zm11.39 0l.633 1.934h1.986l-1.617 1.178.615 1.898-1.634-1.178-1.618 1.178.616-1.916-1.635-1.178h2.021l.633-1.916zm11.408 0l.616 1.934h2.021l-1.635 1.178.633 1.898-1.635-1.178-1.634 1.178.632-1.916-1.634-1.178h2.004l.632-1.916zm11.391 0l.633 1.934h2.004l-1.617 1.178.615 1.898-1.635-1.178-1.617 1.178.615-1.916-1.617-1.178h2.004l.615-1.916zm11.408 0l.615 1.934h2.022l-1.635 1.178.633 1.898L62.7 34.98l-1.635 1.178.633-1.916-1.634-1.178h2.02l.616-1.916zM11.408 36l.615 1.916h2.022l-1.635 1.178.615 1.933-1.617-1.195-1.635 1.178.616-1.916-1.618-1.178h2.004L11.408 36zm11.39 0l.634 1.916h2.004L23.8 39.094l.633 1.933-1.635-1.195-1.635 1.178.633-1.916-1.635-1.178h2.022L22.799 36zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.933-1.617-1.195-1.635 1.178.615-1.916-1.617-1.178h2.004L34.207 36zm11.39 0l.633 1.916h2.004l-1.617 1.178.615 1.933-1.634-1.195-1.617 1.178.615-1.916-1.635-1.178H45L45.598 36zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.933-1.617-1.195-1.635 1.178.615-1.916-1.617-1.178h2.004L57.006 36zm-51.31 4.852l.632 1.916h2.004l-1.617 1.177.615 1.916-1.635-1.177-1.617 1.177.615-1.933L3.06 42.75h2.039l.597-1.898zm11.408 0l.615 1.916h2.021l-1.634 1.177.632 1.916-1.634-1.177-1.635 1.177.633-1.933-1.635-1.178h2.004l.633-1.898zm11.39 0l.633 1.916h1.986l-1.582 1.177.616 1.916-1.635-1.177-1.617 1.177.615-1.933-1.635-1.178h2.021l.598-1.898zm11.408 0l.616 1.916h2.021l-1.635 1.177.633 1.916-1.635-1.177-1.634 1.177.632-1.933-1.634-1.178h2.004l.632-1.898zm11.391 0l.633 1.916h2.004l-1.617 1.177.615 1.916-1.635-1.177-1.617 1.177.615-1.933-1.617-1.178h2.004l.615-1.898zm11.408 0l.615 1.916h2.022l-1.635 1.177.633 1.916-1.635-1.177-1.635 1.177.633-1.933-1.634-1.178h2.02l.616-1.898z"
+                ></path>
+            </g>
+            <defs>
+                <clipPath id="clip0_33_6">
+                    <path fill="#fff" d="M0 0H120V90H0z"></path>
+                </clipPath>
+            </defs>
+        </Flag>
+    </div>
+)
+
+const FlagDE = () => (
+    <div title="Deutsch">
+        <Flag
+            xmlns="http://www.w3.org/2000/svg"
+            width="120"
+            height="90"
+            fill="none"
+            viewBox="0 0 120 90"
+        >
+            <path fill="#FFCE00" d="M0 60h120v30H0V60z"></path>
+            <path fill="#000" d="M0 0h120v30H0V0z"></path>
+            <path fill="#D00" d="M0 30h120v30H0V30z"></path>
+        </Flag>
+    </div>
+)
 
 export default MyNavigationMenu

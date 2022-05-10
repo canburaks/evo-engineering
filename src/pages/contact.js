@@ -26,7 +26,7 @@ function ContactPage(props) {
     useEffect(() => {
         if (myref && myref.current) {
             const attrs = myref.current.getBoundingClientRect()
-            const w = Math.floor(attrs.width) - 96
+            const w = Math.floor(attrs.width)
             const h = 400
 
             if (w && h && w !== size.width) {
@@ -46,15 +46,12 @@ function ContactPage(props) {
             </Head>
             <div className="bg-white">
                 <div
-                    className="max-w-6xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8"
+                    className="max-w-5xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8"
                     ref={myref}
                 >
                     <h1 className="text-4xl font-extrabold text-gray-900 lg:text-6l">
                         {t("pages.contact.title")}
                     </h1>
-                    <p className="mt-6 text-lg text-gray-500 max-w-3xl">
-                        {t("pages.contact.description")}
-                    </p>
 
                     <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
                         <div>
@@ -125,10 +122,11 @@ function ContactPage(props) {
                         </div>
                     </div>
                     <StyledSeparator css={{ backgroundColor: "#ccc" }} />
-                    <div className="flex flex-col items-center p-12">
+                    <div className="flex flex-col items-center relative">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5319.913998109177!2d11.584885!3d48.18818!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa224758fc978225d!2sEVO%20Engineering%20GmbH!5e0!3m2!1sde!2str!4v1652131992150!5m2!1sde!2str"
                             width={size.width}
+                            className="max-w-full"
                             height={size.height}
                             allowFullScreen=""
                             loading="lazy"

@@ -1,15 +1,19 @@
 export const footer = {
     quicklinks: [
         {
-            key: "about",
+            key: "menu.home.title",
+            href: "/"
+        },
+        {
+            key: "menu.about.title",
             href: "/about-us"
         },
         {
-            key: "contact",
+            key: "menu.contact.title",
             href: "/contact"
         },
         {
-            key: "careers",
+            key: "menu.careers.title",
             href: "https://evo-engineering-gmbh.jobs.personio.de/"
         }
     ],
@@ -27,22 +31,22 @@ export const footer = {
             href: "/about-us#values"
         },
         {
-            key: "quality",
-            href: "/"
+            key: "menu.compliance.title",
+            href: "/about-us/compliance"
         }
     ],
     legal: [
         {
             key: "imprint",
-            href: "/"
+            href: "/about-us/imprint"
         },
         {
             key: "privacy",
-            href: "/"
+            href: "/legal/privacy"
         },
         {
             key: "tos",
-            href: "/"
+            href: "/legal/terms-of-service"
         }
     ],
     social: [

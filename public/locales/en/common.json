@@ -24,12 +24,15 @@
   "quality": "Quality & Environment",
   "management": "Management Team",
   "menu": {
+    "home": {
+      "title": "Home"
+    },
     "about": {
       "title": "About us",
       "description": "The things you want to know about EVO Engineering."
     },
     "visionMissionValues": {
-      "title": "Vision, Missin and Values",
+      "title": "Vision, Mission and Values",
       "description": "About our vision, mission and values."
     },
     "quality": {
@@ -48,7 +51,7 @@
       "description": "Our contact details. We'd love to hear from you."
     },
     "compliance": {
-      "title": "Compliance & Code of Ethics",
+      "title": "Code of Ethics",
       "description": "The code of ethics and compliance of EVO Engineering."
     },
     "careers": {
@@ -93,9 +96,8 @@
     },
     "contact": {
       "metaTitle": "Contact | EVO Engineering GmbH",
-      "metaDescription": "The contact details of EVO Engineering GmbH",
+      "metaDescription": "The contact details",
       "title": "Contact Information",
-      "description": "We'd love to hear from you. Send us an email or call us.",
       "tel": "<a rel='noopener nofollow' href='+498937458130'>+49 89 374 581 30</a>",
       "fax": "<p>+49 89 374 581 32</p>",
       "email": "<a rel='noopener nofollow' href='mailto:info@evo-e.com'>info@evo-e.com</a>",
@@ -154,8 +156,10 @@
     "compliance": {
       "metaTitle": "Compliance & Code of Ethics | EVO Engineering GmbH",
       "metaDescription": "It is fundamental to the success of our company that we make well-grounded decisions at all times as business partners, suppliers, customers, and an employer.",
+      "title": "Compliance & Code of Ethics",
+      "description": "Compliance is not an empty phrase for us, it is a self-evident obligation, every day.",
       "content": {
-        "p1": "Compliance is not an empty phrase for us, it is a self-evident obligation, every day.",
+        "p1": "Compliance ist für uns keine leere Phrase, sie ist selbstverständliche Verpflichtung, jeden Tag.",
         "p2": "It is fundamental to the success of our company that we make well-grounded decisions at all times as business partners, suppliers, customers, and an employer. One basis for these decisions are",
         "l1": "<li>Applicable laws</li><li><a href='https://www.unglobalcompact.org/what-is-gc/mission/principles' rel='nofollow noopener' target='_blank' title='the ten principles of the United Nations Global Compact'>The ten principles of the United Nations Global Compact</a> on human rights, labor, environmental responsibility and anti-corruption, and</li><li>Our corporate values</li>",
         "p3": "All employees of EVO Engineering GmbH are obliged to comply with these rules.",
@@ -168,10 +172,8 @@
         "p10": "Any business information, whether it is digital, physical, or spoken, is handled with care. All EVO employees adhere to strict guidelines, e.g. clear/clean desk/screen policy and information handling policy.",
         "p11": "In case we get to know insider information, we use it only in a manner allowed by applicable laws.",
         "p12": "We apply the specifications of EU-GDPR and local laws.",
-        "p13": "We expect corresponding policies and behavior from our partners, suppliers, and customers.<br />, Awareness and open communication are very important to us. So everybody is obliged to speak up if any violation of laws or this code of conduct is perceived and contact one&#39;s manager. We will protect whistle-blowers in accordance with applicable law."
-      },
-      "title": "Compliance & Code of Ethics",
-      "description": "Compliance is not an empty phrase for us, it is a self-evident obligation, every day."
+        "p13": "We expect corresponding policies and behavior from our partners, suppliers, and customers. Awareness and open communication are very important to us. So everybody is obliged to speak up if any violation of laws or this code of conduct is perceived and contact one&#39;s manager. We will protect whistle-blowers in accordance with applicable law."
+      }
     }
   }
 }

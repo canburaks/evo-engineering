@@ -23,11 +23,11 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
                 <div className="pb-8 grid grid-cols-1 md:grid-cols-2 lg:grid lg:grid-cols-5 lg:gap-8">
                     <div className="flex flex-col col-span-1 md:col-span-2 mt-8">
-                        <h3 className="text-2xl text-white font-bold">
+                        <h3 className="text-sm font-semibold tracking-wider uppercase  text-sans text-white">
                             <a href="/">EVO Engineering GmbH</a>
                         </h3>
 
-                        <address className="text-white text-base mt-4">
+                        <address className="text-gray-400 text-base mt-4">
                             Frankfurter Ring 105, <br /> München, Bayern 80807,
                             DE
                         </address>
@@ -51,7 +51,6 @@ export default function Footer() {
                                                 </a>
                                             </li>
                                         ))}
-                                        ))
                                     </ul>
                                 </div>
                             ))}
@@ -114,7 +113,7 @@ export default function Footer() {
                                     <a
                                         key={item.key}
                                         href={s(item.key)}
-                                        className="text-gray-400 hover:text-gray-300 text-white cursor-pointer"
+                                        className="text-gray-400 hover:text-gray-300  cursor-pointer"
                                     >
                                         <span className="sr-only">
                                             {item.key}

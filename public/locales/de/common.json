@@ -16,7 +16,7 @@
   "slogan": "",
   "tos": "Nutzungsbedingungen",
   "title": "EVO Engineering",
-  "Imprint": "Impressum",
+  "imprint": "Impressum",
   "whatWeDo": "Was wir tun?",
   "ourVision": "Unsere Vision",
   "ourMission": "Unsere Aufgabe",
@@ -24,6 +24,9 @@
   "quality": "Qualität & Umwelt",
   "management": "Management-Team",
   "menu": {
+    "home": {
+      "title": "Startseite"
+    },
     "about": {
       "title": "Über uns",
       "description": "Was Sie über EVO Engineering wissen möchten."
@@ -48,7 +51,7 @@
       "description": "Unsere Kontaktdaten. Wir würden uns freuen, von Ihnen zu hören."
     },
     "compliance": {
-      "title": "Compliance & Ethikkodex",
+      "title": "Ethikkodex",
       "description": "Der Ethik- und Compliance-Kodex von EVO Engineering."
     },
     "careers": {
@@ -94,8 +97,7 @@
     "contact": {
       "metaTitle": "Kontakt | EVO Engineering GmbH",
       "metaDescription": "Die Kontaktdaten der EVO Engineering GmbH",
-      "title": "Die Kontaktdaten der EVO Engineering GmbH",
-      "description": "Wir würden uns freuen, von Ihnen zu hören. Senden Sie uns eine E-Mail oder rufen Sie uns an.",
+      "title": "Die Kontaktdaten",
       "tel": "<a rel='noopener nofollow' href='+498937458130'>+49 89 374 581 30</a>",
       "fax": "<p>+49 89 374 581 32</p>",
       "email": "<a rel='noopener nofollow' href='mailto:info@evo-e.com'>info@evo-e.com</a>",
@@ -157,20 +159,21 @@
       "title": "Compliance & Ethikkodex",
       "description": "Compliance ist für uns keine leere Phrase, sie ist selbstverständliche Verpflichtung, jeden Tag.",
       "content": {
-        "p1": "Compliance is not an empty phrase for us, it is a self-evident obligation, every day.",
-        "p2": "It is fundamental to the success of our company that we make well-grounded decisions at all times as business partners, suppliers, customers, and an employer. One basis for these decisions are",
-        "l1": "<li>Applicable laws</li><li><a href='https://www.unglobalcompact.org/what-is-gc/mission/principles' rel='nofollow noopener' target='_blank' title='the ten principles of the United Nations Global Compact'>The ten principles of the United Nations Global Compact</a> on human rights, labor, environmental responsibility and anti-corruption, and</li><li>Our corporate values</li>",
-        "p3": "All employees of EVO Engineering GmbH are obliged to comply with these rules.",
-        "p4": "Our employees' well-being is very important to us. They shall all have proper working conditions for their health and safety. We all deserve mutual respect.",
-        "p5": "EVO wants to provide jobs, that are free of discrimination and harassment based on gender, race, skin color, religion, age, nationality, disabilities, or sexual orientation. Neither bullying nor discrimination is tolerated.",
-        "p6": "Conflicts of interest shall be avoided, e.g by not hiring close relatives as direct subordinates. In case a potential conflict of interest is noticed, it is expected to be reported proactively, and each case is assessed case by case.",
-        "p7": "We do not tolerate corruption or bribery of any kind. It is prohibited to give or accept, any gifts or respective, which could impair the objective business decision making",
-        "p8": "Knowledge and information is our biggest asset, so we protect them as well as possible.",
-        "p9": "We never disclose any business secrets to anyone who is not entitled to that information.",
-        "p10": "Any business information, whether it is digital, physical, or spoken, is handled with care. All EVO employees adhere to strict guidelines, e.g. clear/clean desk/screen policy and information handling policy.",
-        "p11": "In case we get to know insider information, we use it only in a manner allowed by applicable laws.",
-        "p12": "We apply the specifications of EU-GDPR and local laws.",
-        "p13": "We expect corresponding policies and behavior from our partners, suppliers, and customers.<br />, Awareness and open communication are very important to us. So everybody is obliged to speak up if any violation of laws or this code of conduct is perceived and contact one&#39;s manager. We will protect whistle-blowers in accordance with applicable law."
+        "p1": "Compliance ist für uns keine leere Phrase, sie ist selbstverständliche Verpflichtung, jeden Tag.",
+        "p2": "Für den Erfolg unseres Unternehmens ist es von grundlegender Bedeutung, dass wir als Geschäftspartner, Lieferant, Kunde und als Arbeitgeber jederzeit fundierte Entscheidungen treffen. Eine Basis dieser Entscheidungen sind ",
+        "l1": "<li>Geltende gesetze.</li><li><a href='https://www.unglobalcompact.org/what-is-gc/mission/principles' rel='nofollow noopener' target='_blank' title='the ten principles of the United Nations Global Compact'>Die zehn Prinzipien des Global Compact der Vereinten Nationen</a> für Menschenrechte, Arbeit, Umweltverantwortung und Korruptionsbekämpfung sowie.</li><li>Die eigenen Unternehmenswerte.</li>",
+        "p3": "Alle Mitarbeiterinnen und Mitarbeiter der EVO Engineering GmbH sind verpflichtet, sich an die genannten Regeln zu halten.",
+        "p4": "Das Wohl unserer Mitarbeiter ist uns sehr wichtig. Wir bieten alle angemessenen Arbeitsbedingungen, die ihre Gesundheit und Sicherheit gewährleisten.",
+        "p5.5": "Wir alle verdienen gegenseitigen Respekt.",
+        "p5": "EVO bietet Arbeitsplätze, die frei von Diskriminierung und Belästigung aufgrund von Geschlecht, Rasse, Hautfarbe, Religion, Alter, Nationalität, Behinderung oder sexueller Orientierung sind. Weder Mobbing noch Diskriminierung werden toleriert.",
+        "p6": "Interessenkonflikte gilt es zu vermeiden, so werden z.B. keine Mitarbeiter als direkte Untergebene eingestellt, wenn eine enge verwandtschaftliche Beziehung vorliegt.",
+        "p7": "Falls ein potenzieller Interessenkonflikt bemerkt wird, ist dieser proaktiv zu melden und es wird jedem Einzelfall nachgegangen. Wir dulden keine Korruption oder Bestechung jeglicher Art. Es ist verboten, Geschenke zu machen oder anzunehmen, die die objektive Entscheidungsfindung beeinträchtigen könnten.",
+        "p8": "Wissen und Informationen sind unser größtes Kapital, deshalb schützen wir sie so gut wie möglich.",
+        "p9": "Wir geben niemals Geschäftsgeheimnisse an Personen weiter, die nicht berechtigt sind, diese Informationen zu erhalten.",
+        "p10": "Sämtliche Geschäftsinformationen werden mit Sorgfalt behandelt, unabhängig von ihrer Speicherung oder Übertragung (digital, physisch oder mündlich). Alle EVO-Mitarbeiter halten sich an strenge Richtlinien, z. B. die 'Clear/Clean Desk/Screen' Policy und die Richtlinie für den Umgang mit Informationen.",
+        "p11": "Sollten wir Kenntnis von Insiderinformationen erhalten, verwenden wir diese nur in einer Weise, die nach geltendem Recht zulässig ist und nicht zum persönlichen Vorteil.",
+        "p12": "Wir halten uns an die Vorgaben der EU-GDPR und der lokalen Gesetze. ",
+        "p13": "Von unseren Partnern, Lieferanten und Kunden warten wir, dass sie vergleichbare Regeln und Grundsätze formulieren und umsetzen. Sensibilisierung und offene Kommunikation sind uns sehr wichtig. Daher ist jeder Mitarbeiter verpflichtet, Verstöße gegen geltende Gesetze oder diesen Verhaltenskodex anzusprechen und den jeweiligen Vorgesetzten zu kontaktieren. Whistleblower werden von uns gemäß den geltenden Gesetzen geschützt.  "
       }
     }
   }

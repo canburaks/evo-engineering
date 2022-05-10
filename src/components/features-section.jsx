@@ -119,11 +119,20 @@ export function FeatureSection({ title, description, values }) {
                             />
                         </svg>
                         <div className="relative float-right w-full rounded-lg p-2">
-                            <img
+                            {/*<img
                                 className="relative mx-auto rounded-lg shadow-lg"
                                 width={490}
                                 src="/img/ev-graphic-1.webp"
                                 alt=""
+                            />*/}
+                            <video
+                                className="relative mx-auto rounded-lg shadow-lg"
+                                width={490}
+                                autoPlay
+                                muted
+                                loop
+                                src="/video/electrical-cars.mp4"
+                                type="video/mp4"
                             />
                         </div>
                     </div>
