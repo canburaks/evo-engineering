@@ -47,7 +47,7 @@ export function FeatureSection({ title, description, values }) {
                 </svg>
 
                 <div className="relative">
-                    <h2 className="text-center text-2xl  md:text-6xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    <h2 className="text-center mt-3 text-3xl font-extrabold text-gray-700 leading-8 tracking-tight sm:text-4xl">
                         {title}
                     </h2>
                     <p className="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
@@ -235,11 +235,20 @@ export function FeatureSection({ title, description, values }) {
                                 />
                             </svg>
                             <div className="relative float-right w-full rounded-lg p-2">
-                                <img
+                                {/*<img
                                     className="relative mx-auto rounded-lg shadow-lg"
                                     width={490}
                                     src="/img/ev-graphics.webp"
                                     alt="Electrical car"
+                                />*/}
+                                <video
+                                    className="relative mx-auto rounded-lg shadow-lg"
+                                    width={490}
+                                    autoPlay
+                                    muted
+                                    loop
+                                    src="/video/green-charger.mp4"
+                                    type="video/mp4"
                                 />
                             </div>
                         </div>

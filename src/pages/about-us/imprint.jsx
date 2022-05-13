@@ -5,6 +5,7 @@ import nextI18NextConfig from "../../../next-i18next.config"
 import { useTranslation } from "next-i18next"
 import { styled } from "../../styles/stitches.config"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
+import { PaperClipIcon } from "@heroicons/react/solid"
 
 const StyledSeparator = styled(SeparatorPrimitive.Root, {
     backgroundColor: "#888",
@@ -43,52 +44,120 @@ const ImprintPage = () => {
                 />
             </Head>
             <div className="bg-white">
-                <section className="bg-white dark:bg-gray-900">
+                <section className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 py-20">
                     <div className="container px-6 py-10 mx-auto">
-                        <div className="lg:flex lg:items-center">
-                            <div className="w-full space-y-12 lg:w-1/2 ">
-                                <div>
-                                    <h1 className="text-3xl font-semibold text-gray-200 capitalize lg:text-4xl">
-                                        {t("pages.compliance.title")}
-                                        <br />
-                                    </h1>
-
-                                    <div className="mt-2">
-                                        <span className="inline-block w-40 h-1 rounded-full bg-blue-500"></span>
-                                        <span className="inline-block w-3 h-1 ml-1 rounded-full bg-blue-500"></span>
-                                        <span className="inline-block w-1 h-1 ml-1 rounded-full bg-blue-500"></span>
-                                    </div>
-                                </div>
-
-                                <div className="md:flex md:items-start md:-mx-4">
-                                    <span className="inline-block p-2 text-orange-500 bg-blue-100 rounded-xl md:mx-4 dark:bg-orange-500"></span>
-
-                                    <div className="md:mx-4 md:mt-0">
-                                        <h2
-                                            className="text-2xl  text-gray-200 capitalize"
-                                            id="mission"
-                                        >
-                                            {t("pages.compliance.description")}
-                                        </h2>
-                                    </div>
-                                </div>
+                        <div className="bg-white shadow overflow-hidden sm:rounded-lg">
+                            <div className="px-4 py-5 sm:px-6">
+                                <h3 className="text-lg leading-6 font-medium text-gray-900">
+                                    {t("pages.imprint.title")}
+                                </h3>
+                                <p className="mt-1 max-w-2xl text-sm text-gray-500">
+                                    {t("pages.imprint.subtitle")}
+                                </p>
                             </div>
-
-                            <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
-                                <img
-                                    className="w-[20rem] h-[20rem] object-cover xl:w-[28rem] xl:h-[28rem] rounded-full"
-                                    src="/img/compliance.webp"
-                                    alt="EVO Engineering electrical cars"
-                                />
+                            <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
+                                <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+                                    <div className="sm:col-span-1">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {t("pages.imprint.item1.title")}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900">
+                                            {t("pages.imprint.item1.value")}
+                                        </dd>
+                                    </div>
+                                    <div className="sm:col-span-1">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {t("pages.imprint.item10.title")}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900">
+                                            {t("pages.imprint.item10.value")}
+                                        </dd>
+                                    </div>
+                                    <div className="sm:col-span-1">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {t("pages.imprint.item3.title")}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900">
+                                            {t("pages.imprint.item3.value")}
+                                        </dd>
+                                    </div>
+                                    <div className="sm:col-span-1">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {t("pages.imprint.item4.title")}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900">
+                                            {t("pages.imprint.item4.value")}
+                                        </dd>
+                                    </div>
+                                    <div className="sm:col-span-1">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {t("pages.imprint.item5.title")}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900">
+                                            {t("pages.imprint.item5.value")}
+                                        </dd>
+                                    </div>
+                                    <div className="sm:col-span-1">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {t("pages.imprint.item6.title")}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900">
+                                            {t("pages.imprint.item6.value")}
+                                        </dd>
+                                    </div>
+                                    <div className="sm:col-span-1">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {t("pages.imprint.item7.title")}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900">
+                                            {t("pages.imprint.item7.value")}
+                                        </dd>
+                                    </div>
+                                    <div className="sm:col-span-1">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {t("pages.imprint.item8.title")}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900">
+                                            {t("pages.imprint.item8.value")}
+                                        </dd>
+                                    </div>
+                                    <div className="sm:col-span-1">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {t("pages.imprint.item9.title")}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900">
+                                            {t("pages.imprint.item9.value")}
+                                        </dd>
+                                    </div>
+                                    <div className="sm:col-span-2">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {t("pages.imprint.text1.title")}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900">
+                                            {t("pages.imprint.text1.value")}
+                                        </dd>
+                                    </div>
+                                    <div className="sm:col-span-2">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {t("pages.imprint.text2.title")}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900">
+                                            {t("pages.imprint.text2.value")}
+                                        </dd>
+                                    </div>
+                                    <div className="sm:col-span-2">
+                                        <dt className="text-sm font-medium text-gray-500">
+                                            {t("pages.imprint.text3.title")}
+                                        </dt>
+                                        <dd className="mt-1 text-sm text-gray-900">
+                                            {t("pages.imprint.text3.value")}
+                                        </dd>
+                                    </div>
+                                </dl>
                             </div>
                         </div>
-
-                        <StyledSeparator className="border-gray-200 my-12 dark:border-gray-700" />
                     </div>
                 </section>
-                <div className="py-16 bg-gray-50 overflow-hidden">
-
-                </div>
             </div>
         </Fragment>
     )

@@ -174,5 +174,5 @@ const InfoBox = styled(Box, {
     "@initial": { maxWidth: "90%", padding: "1rem" },
     "@sm": { maxWidth: "90%", padding: "2rem" },
     "@md": { maxWidth: "80rem", padding: "3rem" },
-    bottom: 64
+    bottom: 16
 })

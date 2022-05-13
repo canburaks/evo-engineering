@@ -66,7 +66,7 @@
       "title": "Elektrifizierung der nächsten Generation | EVO-Engineering",
       "slogan": "",
       "featureSection": {
-        "title": "Wir elektrifizieren Mobilität. Effiziente, sichere und saubere Antriebe für jedermann.",
+        "title": "Wir bewegen E-Mobilität und innovative Lösungen weltweit.",
         "description": "Als spezialisierter Automotive-Engineering-Partner unterstützen wir unsere Kunden und Partner bei der Entwicklung von Antrieben der Zukunft - weltweit, mit höchster Qualität, Effizienz und Sicherheit. ",
         "value1": {
           "title": "Spitzenleistungen",
@@ -92,6 +92,15 @@
       "feature2": {
         "title": "Unsere Aufgabe",
         "description": "Electric mobility is our passion!"
+      },
+      "fading-section": {
+        "title": "Was wir tun?",
+        "subtitle": "Wir bieten unseren Kunden Engineering-Dienstleistungen für den Elektroantrieb der nächsten Generation mit höchster Qualität, Kompetenz, Flexibilität und Kosteneffizienz.",
+        "expertise1": "Anforderungsmanagement",
+        "expertise2": "Funktionsentwicklung",
+        "expertise3": "System Engineering",
+        "expertise4": "Test und Absicherung",
+        "expertise5": "Projektmanagement - klassisch und agil"
       }
     },
     "contact": {
@@ -174,6 +183,62 @@
         "p11": "Sollten wir Kenntnis von Insiderinformationen erhalten, verwenden wir diese nur in einer Weise, die nach geltendem Recht zulässig ist und nicht zum persönlichen Vorteil.",
         "p12": "Wir halten uns an die Vorgaben der EU-GDPR und der lokalen Gesetze. ",
         "p13": "Von unseren Partnern, Lieferanten und Kunden warten wir, dass sie vergleichbare Regeln und Grundsätze formulieren und umsetzen. Sensibilisierung und offene Kommunikation sind uns sehr wichtig. Daher ist jeder Mitarbeiter verpflichtet, Verstöße gegen geltende Gesetze oder diesen Verhaltenskodex anzusprechen und den jeweiligen Vorgesetzten zu kontaktieren. Whistleblower werden von uns gemäß den geltenden Gesetzen geschützt.  "
+      }
+    },
+    "imprint": {
+      "title": "Imprint",
+      "subtitle": "EVO Engineering GmbH",
+      "item1": {
+        "title": "Address",
+        "value": "Frankfurter Ring 105, 80807 Munich, Germany"
+      },
+      "item2": {
+        "title": "Fax",
+        "value": "+49 89 374 581 32"
+      },
+      "item3": {
+        "title": "Email",
+        "value": "info@evo-e.com"
+      },
+      "item4": {
+        "title": "Company website",
+        "value": "https://www.evo-e.com"
+      },
+      "item5": {
+        "title": "Managing Director",
+        "value": "Emre Boyacigil"
+      },
+      "item6": {
+        "title": "Registration number",
+        "value": "HRB 270953"
+      },
+      "item7": {
+        "title": "Register Court",
+        "value": "Local court Munich"
+      },
+      "item8": {
+        "title": "VAT ID",
+        "value": "DE350259145"
+      },
+      "item9": {
+        "title": "Register Court",
+        "value": "Local court Munich"
+      },
+      "item10":{
+        "title": "Phone",
+        "value": "+49 89 374 581 30"
+      },
+      "text1": {
+        "title": "Reference to EU dispute resolution",
+        "value": "The European Commission provides a platform for online dispute resolution (OS): http://ec.europa.eu/consumers/odr . EVO Engineering GmbH is neither obliged nor willing to participate in an out-of-court dispute resolution before a consumer arbitration board."
+      },
+      "text2": {
+        "title": "Responsible for the content according to § 55 Abs. 2 RStV:",
+        "value": "Mr. Emre Boyacigil, address see above."
+      },
+      "text3": {
+        "title": "",
+        "value": "The content and structure of these web pages are protected by copyright. The reproduction of information or data, in particular the use of texts, parts of texts or images requires our prior written consent."
       }
     }
   }

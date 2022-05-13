@@ -24,6 +24,7 @@ import { styled, css } from "../styles/stitches.config"
 import { useRouter } from "next/router"
 import { FeatureColorful } from "../components/feature-colorful"
 import { FeatureSection } from "../components/features-section.jsx"
+import FadingSection from "../components/fading-section"
 import {
     AnnotationIcon,
     GlobeAltIcon,
@@ -87,6 +88,15 @@ function HomePage(props) {
                         icon: AnnotationIcon
                     }
                 ]}
+            />
+            <FadingSection
+                title={t("pages.home.fading-section.title")}
+                subtitle={t("pages.home.fading-section.subtitle")}
+                item1={t("pages.home.fading-section.expertise1")}
+                item2={t("pages.home.fading-section.expertise2")}
+                item3={t("pages.home.fading-section.expertise3")}
+                item4={t("pages.home.fading-section.expertise4")}
+                item5={t("pages.home.fading-section.expertise5")}
             />
         </Fragment>
     )
