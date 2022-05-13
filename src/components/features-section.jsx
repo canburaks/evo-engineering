@@ -64,13 +64,13 @@ export function FeatureSection({ title, description, values }) {
                                     className="relative"
                                 >
                                     <dt>
-                                        <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white">
+                                        <div className="relative flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white">
                                             <item.icon
                                                 className="h-6 w-6"
                                                 aria-hidden="true"
                                             />
                                         </div>
-                                        <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                                        <p className="ml-16 text-lg -mt-12 leading-6 font-medium text-gray-900">
                                             {item.title}
                                         </p>
                                     </dt>
@@ -126,8 +126,9 @@ export function FeatureSection({ title, description, values }) {
                                 alt=""
                             />*/}
                             <video
-                                className="relative mx-auto rounded-lg shadow-lg"
+                                className="relative mx-auto rounded-lg shadow-lg mb-12"
                                 width={490}
+                                height={270}
                                 autoPlay
                                 muted
                                 loop
@@ -172,23 +173,23 @@ export function FeatureSection({ title, description, values }) {
                     />
                 </svg>
 
-                <div className="relative mt-12 sm:mt-16 lg:mt-24">
-                    <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
+                <div className="relative ">
+                    <div className="px-8 lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                         <div className="lg:col-start-2">
-                            <dl className="mt-10 space-y-10">
+                            <dl className="space-y-10">
                                 {values.slice(2, 4).map((item) => (
                                     <div
                                         key={item.title.replace(" ", "-")}
                                         className="relative"
                                     >
                                         <dt>
-                                            <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white">
+                                            <div className="relatvie flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white">
                                                 <item.icon
                                                     className="h-6 w-6"
                                                     aria-hidden="true"
                                                 />
                                             </div>
-                                            <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                                            <p className="ml-16 -mt-12 text-lg leading-6 font-medium text-gray-900">
                                                 {item.title}
                                             </p>
                                         </dt>
@@ -242,6 +243,7 @@ export function FeatureSection({ title, description, values }) {
                                     alt="Electrical car"
                                 />*/}
                                 <video
+                                    height={270}
                                     className="relative mx-auto rounded-lg shadow-lg"
                                     width={490}
                                     autoPlay

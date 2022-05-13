@@ -186,11 +186,11 @@
       }
     },
     "imprint": {
-      "title": "Imprint",
+      "title": "Impressum",
       "subtitle": "EVO Engineering GmbH",
       "item1": {
         "title": "Address",
-        "value": "Frankfurter Ring 105, 80807 Munich, Germany"
+        "value": "Frankfurter Ring 105, 80807 München, Deutschland"
       },
       "item2": {
         "title": "Fax",
@@ -201,44 +201,40 @@
         "value": "info@evo-e.com"
       },
       "item4": {
-        "title": "Company website",
+        "title": "Unternehmens-Webseite",
         "value": "https://www.evo-e.com"
       },
       "item5": {
-        "title": "Managing Director",
+        "title": "Geschäftsführer",
         "value": "Emre Boyacigil"
       },
       "item6": {
-        "title": "Registration number",
+        "title": "Registernummer",
         "value": "HRB 270953"
       },
       "item7": {
-        "title": "Register Court",
-        "value": "Local court Munich"
+        "title": "Registergericht",
+        "value": "Amtsgericht Munich"
       },
       "item8": {
-        "title": "VAT ID",
+        "title": "Umsatzsteuer-ID",
         "value": "DE350259145"
       },
-      "item9": {
-        "title": "Register Court",
-        "value": "Local court Munich"
-      },
       "item10":{
-        "title": "Phone",
+        "title": "Tel",
         "value": "+49 89 374 581 30"
       },
       "text1": {
-        "title": "Reference to EU dispute resolution",
-        "value": "The European Commission provides a platform for online dispute resolution (OS): http://ec.europa.eu/consumers/odr . EVO Engineering GmbH is neither obliged nor willing to participate in an out-of-court dispute resolution before a consumer arbitration board."
+        "title": "Hinweis auf EU-Streitschlichtung",
+        "value": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: http://ec.europa.eu/consumers/odr . Die EVO Engineering GmbH ist weder verpflichtet noch bereit, an einer außergerichtlichen Streitbeilegung vor einer Verbraucherschlichtungsstelle teilzunehmen."
       },
       "text2": {
-        "title": "Responsible for the content according to § 55 Abs. 2 RStV:",
-        "value": "Mr. Emre Boyacigil, address see above."
+        "title": "Inhaltlich verantwortlich gemäß § 55 Abs. 2 RStV",
+        "value": "Herr Emre Boyacigil, Anschrift s.o."
       },
       "text3": {
         "title": "",
-        "value": "The content and structure of these web pages are protected by copyright. The reproduction of information or data, in particular the use of texts, parts of texts or images requires our prior written consent."
+        "value": "Inhalt und Aufbau dieser Web-Seiten sind urheberrechtlich geschützt. Die Vervielfältigung von Informationen oder Daten, insbesondere die Verwendung von Texten, Texteilen oder Bildmaterial bedarf unserer vorherigen schriftlichen Zustimmung. Informationen zum Datenschutz finden Sie hier."
       }
     }
   }

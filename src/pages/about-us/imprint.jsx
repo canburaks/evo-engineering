@@ -121,14 +121,6 @@ const ImprintPage = () => {
                                             {t("pages.imprint.item8.value")}
                                         </dd>
                                     </div>
-                                    <div className="sm:col-span-1">
-                                        <dt className="text-sm font-medium text-gray-500">
-                                            {t("pages.imprint.item9.title")}
-                                        </dt>
-                                        <dd className="mt-1 text-sm text-gray-900">
-                                            {t("pages.imprint.item9.value")}
-                                        </dd>
-                                    </div>
                                     <div className="sm:col-span-2">
                                         <dt className="text-sm font-medium text-gray-500">
                                             {t("pages.imprint.text1.title")}

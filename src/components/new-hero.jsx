@@ -108,7 +108,7 @@ const slideUpFadeIn = keyframes({
 
 const Title = styled("h1", {
     fontFamily: "$cormorant",
-    letterSpacing: "-0.03em",
+    letterSpacing: "-0.05em",
     color: "#fefefe",
     fontWeight: "600",
     variants: {
