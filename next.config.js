@@ -5,7 +5,7 @@ module.exports = {
     env: {
         host:
             process.env.NODE_ENV === "production"
-                ? process.env.HOST
+                ? "https://www.evo-e.com"
                 : "http://localhost:3000"
     },
     images: {
@@ -13,7 +13,7 @@ module.exports = {
         imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
         minimumCacheTTL: 60,
 
-        domains: ["res.cloudinary.com", "vercel.com", "evo-e.com"]
+        domains: ["res.cloudinary.com", "vercel.com", "evo-e.com", "www.evo-e.com"]
     },
     reactStrictMode: true,
     sassOptions: {
@@ -26,14 +26,14 @@ module.exports = {
     eslint: {
         // Warning: This allows production builds to successfully complete even if
         // your project has ESLint errors.
-        ignoreDuringBuilds: true
+        ignoreDuringBuilds: false
     },
     typescript: {
         // !! WARN !!
         // Dangerously allow production builds to successfully complete even if
         // your project has type errors.
         // !! WARN !!
-        ignoreBuildErrors: true
+        ignoreBuildErrors: false
     },
     i18n
 }

@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react"
+import React, { Fragment, useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { styled, keyframes, css } from "../styles/stitches.config"
@@ -62,19 +62,28 @@ const fadeOut = keyframes({
 })
 
 const StyledMenu = styled(NavigationMenuPrimitive.Root, {
-    position: "relative",
+    variants: {
+        position: {
+            fixed: {
+                position: "fixed",
+                boxShadow: "0 1px 4px rgba(0,0,0,0.1)"
+            },
+            relative: { position: "relative", boxShadow: "none" }
+        }
+    },
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     width: "100vw",
     zIndex: 30,
-    padding: "4px 24px"
+    padding: "4px 24px",
+    transition: "top 0.6s ease-in-out"
 })
 
 const StyledList = styled(NavigationMenuPrimitive.List, {
     all: "unset",
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "start",
     backgroundColor: "white",
     padding: 4,
     borderRadius: 6,
@@ -316,6 +325,7 @@ const ContentListItem = React.forwardRef(
                 ref={forwardedRef}
                 css={{
                     padding: 12,
+                    margin: 0,
                     borderRadius: 6,
                     "&:hover": { backgroundColor: mauve.mauve3 }
                 }}
@@ -323,7 +333,6 @@ const ContentListItem = React.forwardRef(
                 <Link href={href}>
                     <a>
                         <LinkTitle>{title}</LinkTitle>
-                        <LinkText css={{ fontSize: 14 }}>{children}</LinkText>
                     </a>
                 </Link>
             </NavigationMenuLink>
@@ -410,6 +419,7 @@ const ViewportPosition = styled("div", {
 export const MyNavigationMenu = () => {
     const [offcanvas, setOffcanvas] = useState(false)
     const showOffcanvas = () => setOffcanvas(!offcanvas)
+    const myRef = useRef(null)
 
     const { t, i18n } = useTranslation("common")
     const router = useRouter()
@@ -419,18 +429,38 @@ export const MyNavigationMenu = () => {
     const switchToDeutsch = () =>
         router.push({ pathname, query }, asPath, { locale: "de" })
 
+    useEffect(() => {
+        var prevScrollpos = window.pageYOffset
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset
+            //console.log("height", myRef.current.clientHeight)
+            if (myRef && myRef.current && prevScrollpos > 120) {
+                if (prevScrollpos > currentScrollPos) {
+                    myRef.current.style.top = "0"
+                } else {
+                    myRef.current.style.top = `-${myRef.current.clientHeight}px`
+                }
+            }
+            prevScrollpos = currentScrollPos
+        }
+    })
+
     return (
         <Fragment>
-            <NavigationMenu css={{ background: "#ffffff" }}>
+            <NavigationMenu
+                css={{ background: "#ffffff" }}
+                ref={myRef}
+                position="fixed"
+            >
                 <NavigationMenuList css={{ zIndex: offcanvas ? 0 : 20 }}>
                     <NavigationMenuItem>
                         <Link href="/">
-                            <a className="inline-block align-middle leading-[1]">
+                            <a className="inline-block align-middle leading-[1] -ml-4 sm:ml-0">
                                 <Image
                                     src="/img/_evo/evo-e-logo.webp"
                                     alt="Logo"
-                                    width={200}
-                                    height={85}
+                                    width={180}
+                                    height={76}
                                 />
                                 <p className="hidden absolute left-0 -bottom-2 text-[12px] w-[80vw]">
                                     NEXT GENERATION ELECTRIFICATION
@@ -600,8 +630,34 @@ export const MyNavigationMenu = () => {
                         "@md": "hidden"
                     }}
                 >
+                    <NavigationMenuLink
+                        onClick={switchToEnglish}
+                        css={{
+                            cursor: "pointer",
+                            background: "transparent"
+                        }}
+                    >
+                        <FlagUS
+                            locale={
+                                router.locale === "en" ? "active" : "inactive"
+                            }
+                        />
+                    </NavigationMenuLink>
+                    <NavigationMenuLink
+                        onClick={switchToDeutsch}
+                        css={{
+                            cursor: "pointer",
+                            background: "transparent"
+                        }}
+                    >
+                        <FlagDE
+                            locale={
+                                router.locale === "de" ? "active" : "inactive"
+                            }
+                        />
+                    </NavigationMenuLink>
                     <button
-                        className="menu-bars flex text-gray-800 text-[24px]"
+                        className="menu-bars flex text-gray-800 text-[24px] justify-center items-center ml-2 sm:ml-8"
                         aria-label="Right Align"
                     >
                         <FaBars onClick={showOffcanvas} />
@@ -669,6 +725,46 @@ export const MyNavigationMenu = () => {
                             )
                         })}
                     </ul>
+
+                    <NavigationMenu
+                        position="relative"
+                        css={{ marginLeft: 0, paddingLeft: 0 }}
+                    >
+                        <NavigationMenuList
+                            css={{ background: "transparent", marginLeft: 0 }}
+                        >
+                            <NavigationMenuLink
+                                onClick={switchToEnglish}
+                                css={{
+                                    cursor: "pointer",
+                                    background: "transparent"
+                                }}
+                            >
+                                <FlagUS
+                                    locale={
+                                        router.locale === "en"
+                                            ? "active"
+                                            : "inactive"
+                                    }
+                                />
+                            </NavigationMenuLink>
+                            <NavigationMenuLink
+                                onClick={switchToDeutsch}
+                                css={{
+                                    cursor: "pointer",
+                                    background: "transparent"
+                                }}
+                            >
+                                <FlagDE
+                                    locale={
+                                        router.locale === "de"
+                                            ? "active"
+                                            : "inactive"
+                                    }
+                                />
+                            </NavigationMenuLink>
+                        </NavigationMenuList>
+                    </NavigationMenu>
                 </nav>
             </div>
         </Fragment>
@@ -696,33 +792,20 @@ const FlagUS = () => (
             width="120"
             height="90"
             fill="none"
-            viewBox="0 0 120 90"
+            viewBox="0 0 640 480"
             title="English"
         >
-            <g
-                fillRule="evenodd"
-                clipPath="url(#clip0_33_6)"
-                clipRule="evenodd"
-            >
-                <path
-                    fill="#BD3D44"
-                    d="M0 0h171v6.926H0V0zm0 13.852h171v6.925H0v-6.925zm0 13.834h171v6.943H0v-6.943zm0 13.851h171v6.926H0v-6.926zM0 55.39h171v6.925H0V55.39zm0 13.834h171v6.925H0v-6.925zm0 13.851h171V90H0v-6.926z"
-                ></path>
-                <path
-                    fill="#fff"
-                    d="M0 6.926h171v6.926H0V6.926zm0 13.851h171v6.909H0v-6.909zm0 13.834h171v6.926H0v-6.926zm0 13.852h171v6.926H0v-6.926zm0 13.852h171v6.925H0v-6.925zm0 13.833h171v6.926H0v-6.926z"
-                ></path>
-                <path fill="#192F5D" d="M0 0h68.397v48.463H0V0z"></path>
-                <path
-                    fill="#fff"
-                    d="M5.695 2.074l.633 1.916h2.004L6.715 5.168l.615 1.934-1.635-1.196-1.617 1.178.615-1.916L3.06 3.99h2.039l.597-1.916zm11.409 0l.615 1.916h2.021l-1.634 1.178.615 1.934-1.617-1.196-1.635 1.178.615-1.916-1.617-1.178h2.004l.633-1.916zm11.39 0l.633 1.916h1.986l-1.617 1.178.615 1.934-1.634-1.196-1.618 1.178.616-1.916L25.84 3.99h2.021l.633-1.916zm11.408 0l.616 1.916h2.021l-1.635 1.178.633 1.934-1.635-1.196-1.634 1.178.632-1.916-1.634-1.178h2.004l.632-1.916zm11.391 0l.633 1.916h2.004l-1.617 1.178.615 1.934-1.635-1.196-1.617 1.178.615-1.916-1.617-1.178h2.004l.615-1.916zm11.408 0l.615 1.916h2.022l-1.635 1.178.633 1.934L62.7 5.906l-1.635 1.178.633-1.916-1.634-1.178h2.02l.616-1.916zM11.408 6.926l.615 1.916h2.022L12.41 10.02l.598 1.915-1.582-1.177-1.635 1.178.58-1.916L8.79 8.841h2.004l.615-1.916zm11.39 0l.634 1.916h2.004L23.8 10.02l.633 1.915-1.635-1.177-1.635 1.178.633-1.916-1.635-1.178h2.022l.615-1.916zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.915-1.617-1.177-1.635 1.178.615-1.916-1.617-1.178h2.004l.633-1.916zm11.39 0l.633 1.916h2.004L46.6 10.02l.632 1.915-1.634-1.177-1.617 1.178.615-1.916-1.635-1.178H45l.598-1.916zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.915-1.617-1.177-1.635 1.178.615-1.916-1.617-1.178h2.004l.633-1.916zM5.696 11.76l.632 1.95h2.004L6.715 14.89l.615 1.916-1.635-1.196-1.617 1.196.615-1.934-1.634-1.178h2.039l.597-1.933zm11.408 0l.615 1.933h2.021l-1.634 1.178.615 1.916-1.617-1.195-1.635 1.195.615-1.933-1.617-1.178h2.004l.633-1.916zm11.39 0l.633 1.933h1.986l-1.617 1.178.615 1.916-1.634-1.195-1.618 1.195.616-1.933-1.635-1.178h2.021l.633-1.916zm11.408 0l.616 1.933h2.021l-1.635 1.178.633 1.916-1.635-1.195-1.634 1.195.632-1.933-1.634-1.178h2.004l.632-1.916zm11.391 0l.633 1.933h2.004l-1.617 1.178.615 1.916-1.635-1.195-1.617 1.195.615-1.933-1.617-1.178h2.004l.615-1.916zm11.408 0l.615 1.933h2.022l-1.635 1.178.633 1.916-1.635-1.195-1.635 1.195.633-1.933-1.634-1.178h2.02l.616-1.916zM11.408 16.61l.615 1.916h2.022l-1.635 1.178.615 1.934-1.617-1.196-1.635 1.178.616-1.916-1.618-1.178h2.004l.633-1.916zm11.39 0l.634 1.916h2.004L23.8 19.705l.633 1.934-1.635-1.196-1.635 1.178.633-1.916-1.635-1.178h2.022l.615-1.916zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.934-1.617-1.196-1.635 1.178.615-1.916-1.617-1.178h2.004l.633-1.916zm11.39 0l.633 1.916h2.004l-1.617 1.178.615 1.934-1.634-1.196-1.617 1.178.615-1.916-1.635-1.178H45l.598-1.916zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.934-1.617-1.196-1.635 1.178.615-1.916-1.617-1.178h2.004l.633-1.916zm-51.31 4.852l.632 1.916h2.004l-1.617 1.178.615 1.933-1.635-1.195-1.617 1.178.615-1.916-1.634-1.178h2.039l.597-1.916zm11.408 0l.615 1.916h2.021l-1.634 1.178.615 1.916-1.617-1.178-1.635 1.178.615-1.916-1.617-1.178h2.004l.633-1.916zm11.39 0l.633 1.916h1.986l-1.617 1.178.615 1.933-1.634-1.195-1.618 1.178.616-1.916-1.635-1.178h2.021l.633-1.916zm11.408 0l.616 1.916h2.021l-1.635 1.178.633 1.933-1.635-1.195-1.634 1.178.632-1.916-1.634-1.178h2.004l.632-1.916zm11.391 0l.633 1.916h2.004l-1.617 1.178.615 1.933-1.635-1.195-1.617 1.178.615-1.916-1.617-1.178h2.004l.615-1.916zm11.408 0l.615 1.916h2.022l-1.635 1.178.633 1.933-1.635-1.195-1.635 1.178.633-1.916-1.634-1.178h2.02l.616-1.916zm-51.293 4.851l.615 1.916h2.022l-1.635 1.178.615 1.916-1.617-1.195-1.635 1.195.616-1.933-1.618-1.178h2.004l.633-1.899zm11.39 0l.634 1.916h2.004L23.8 29.409l.633 1.916-1.635-1.195-1.635 1.195.633-1.933-1.635-1.178h2.022l.615-1.899zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.916-1.617-1.195-1.635 1.195.615-1.933-1.617-1.178h2.004l.633-1.899zm11.39 0l.633 1.916h2.004l-1.617 1.178.615 1.916-1.634-1.195-1.617 1.195.615-1.933-1.635-1.178H45l.598-1.899zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.916-1.617-1.195-1.635 1.195.615-1.933-1.617-1.178h2.004l.633-1.899zm-51.31 4.834l.632 1.934h2.004L6.715 34.26l.615 1.898-1.635-1.178-1.617 1.178.615-1.916-1.634-1.178h2.039l.597-1.916zm11.408 0l.615 1.934h2.021l-1.634 1.178.632 1.898-1.634-1.178-1.635 1.178.633-1.916-1.635-1.178h2.004l.633-1.916zm11.39 0l.633 1.934h1.986l-1.617 1.178.615 1.898-1.634-1.178-1.618 1.178.616-1.916-1.635-1.178h2.021l.633-1.916zm11.408 0l.616 1.934h2.021l-1.635 1.178.633 1.898-1.635-1.178-1.634 1.178.632-1.916-1.634-1.178h2.004l.632-1.916zm11.391 0l.633 1.934h2.004l-1.617 1.178.615 1.898-1.635-1.178-1.617 1.178.615-1.916-1.617-1.178h2.004l.615-1.916zm11.408 0l.615 1.934h2.022l-1.635 1.178.633 1.898L62.7 34.98l-1.635 1.178.633-1.916-1.634-1.178h2.02l.616-1.916zM11.408 36l.615 1.916h2.022l-1.635 1.178.615 1.933-1.617-1.195-1.635 1.178.616-1.916-1.618-1.178h2.004L11.408 36zm11.39 0l.634 1.916h2.004L23.8 39.094l.633 1.933-1.635-1.195-1.635 1.178.633-1.916-1.635-1.178h2.022L22.799 36zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.933-1.617-1.195-1.635 1.178.615-1.916-1.617-1.178h2.004L34.207 36zm11.39 0l.633 1.916h2.004l-1.617 1.178.615 1.933-1.634-1.195-1.617 1.178.615-1.916-1.635-1.178H45L45.598 36zm11.409 0l.615 1.916h2.022l-1.635 1.178.615 1.933-1.617-1.195-1.635 1.178.615-1.916-1.617-1.178h2.004L57.006 36zm-51.31 4.852l.632 1.916h2.004l-1.617 1.177.615 1.916-1.635-1.177-1.617 1.177.615-1.933L3.06 42.75h2.039l.597-1.898zm11.408 0l.615 1.916h2.021l-1.634 1.177.632 1.916-1.634-1.177-1.635 1.177.633-1.933-1.635-1.178h2.004l.633-1.898zm11.39 0l.633 1.916h1.986l-1.582 1.177.616 1.916-1.635-1.177-1.617 1.177.615-1.933-1.635-1.178h2.021l.598-1.898zm11.408 0l.616 1.916h2.021l-1.635 1.177.633 1.916-1.635-1.177-1.634 1.177.632-1.933-1.634-1.178h2.004l.632-1.898zm11.391 0l.633 1.916h2.004l-1.617 1.177.615 1.916-1.635-1.177-1.617 1.177.615-1.933-1.617-1.178h2.004l.615-1.898zm11.408 0l.615 1.916h2.022l-1.635 1.177.633 1.916-1.635-1.177-1.635 1.177.633-1.933-1.634-1.178h2.02l.616-1.898z"
-                ></path>
-            </g>
-            <defs>
-                <clipPath id="clip0_33_6">
-                    <path fill="#fff" d="M0 0H120V90H0z"></path>
-                </clipPath>
-            </defs>
+            <path fill="#012169" d="M0 0h640v480H0z" />
+            <path
+                fill="#FFF"
+                d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"
+            />
+            <path
+                fill="#C8102E"
+                d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"
+            />
+            <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z" />
+            <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z" />
         </Flag>
     </div>
 )

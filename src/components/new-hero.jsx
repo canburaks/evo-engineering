@@ -82,7 +82,7 @@ export const Hero = ({ title, description }) => {
                             }}
                             className="bg-clip-text animate-text-shimmer bg-[linear-gradient(110deg,#e2e8f0,45%,#1e293b,55%,#e2e8f0)] bg-[length:250%_100%]"
                         >
-                            <div className="text-4xl md:text-5xl lg:text-6xl max-w-full animate-text-shimmer bg-clip-text text-transparent bg-[linear-gradient(110deg,#e2e8f0,45%,#1e293b,55%,#e2e8f0)] bg-[length:250%_100%]">
+                            <div className="text-4xl mb-4 md:text-5xl lg:text-6xl max-w-full animate-text-shimmer bg-clip-text text-transparent bg-[linear-gradient(110deg,#e2e8f0,45%,#1e293b,55%,#e2e8f0)] bg-[length:250%_100%]">
                                 {title}
                             </div>
                         </Title>
@@ -171,7 +171,7 @@ const InfoBox = styled(Box, {
     height: "100%",
     margin: "0 auto",
     width: "100%",
-    "@initial": { maxWidth: "90%", padding: "1rem" },
+    "@initial": { maxWidth: "90%", padding: "1rem", paddingBottom:32 },
     "@sm": { maxWidth: "90%", padding: "2rem" },
     "@md": { maxWidth: "80rem", padding: "3rem" },
     bottom: 16

@@ -5,7 +5,7 @@ import Footer from "./footer"
 export const Layout = ({ children }) => (
     <Fragment>
         <MyNavigationMenu />
-        {children}
+        <main className="pt-[100px]" id="main">{children}</main>
         <Footer />
     </Fragment>
 )

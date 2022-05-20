@@ -1,47 +1,47 @@
-@import './tailwind.css';
-@import './fonts.css';
-@import './typography.css';
-@import './effects.css';
-@import './components/menu-dropdown.css';
+@import "./tailwind.css";
+@import "./fonts.css";
+@import "./typography.css";
+@import "./effects.css";
+@import "./components/menu-dropdown.css";
 
 :root {
-  --teal: #22b8cf;
-  --blue: #2861e1;
-  --purple: #6c23ff;
-  --pink: #f129af;
-  --orange: #f65a5b;
-  --yellow: #ffbf18;
-  --light: #f5f5f5;
-  --dark: #1d1e1f;
-  --brand: #FF8032;
+    --teal: #22b8cf;
+    --blue: #2861e1;
+    --purple: #6c23ff;
+    --pink: #f129af;
+    --orange: #f65a5b;
+    --yellow: #ffbf18;
+    --light: #f5f5f5;
+    --dark: #1d1e1f;
+    --brand: #ff8032;
 }
 html *,
-html[data-thene='light'] * {
-  --text: var(--dark);
-  --background: var(--light);
+html[data-thene="light"] * {
+    --text: var(--dark);
+    --background: var(--light);
 }
-html[data-theme='dark'] * {
-  --text: var(--light);
-  --background: var(--dark);
+html[data-theme="dark"] * {
+    --text: var(--light);
+    --background: var(--dark);
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box !important;
+    box-sizing: border-box !important;
 }
 
 * {
-  margin: 0;
+    margin: 0;
 }
 /*
   3. Allow percentage-based heights in the application
 */
 html,
 body {
-  max-width: 100%;
-  overflow-x: hidden;
-  background-color: #F9FAFB;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #f9fafb;
 }
 /*
   Typographic tweaks!
@@ -49,10 +49,11 @@ body {
   5. Improve text rendering
 */
 body {
-  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+        Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+        sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 /*
   6. Improve media defaults
@@ -62,8 +63,8 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
 /*
   7. Remove built-in form typography styles
@@ -72,7 +73,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 /*
   8. Avoid text overflows
@@ -84,14 +85,14 @@ h3,
 h4,
 h5,
 h6 {
-  overflow-wrap: break-word;
+    overflow-wrap: break-word;
 }
 /*
   9. Create a root stacking context
 */
 #root,
 #__next {
-  isolation: isolate;
+    isolation: isolate;
 }
 /*-----------------------------------------------------------------------------------
     Template Name: Rustic - React Business Template
@@ -118,12 +119,12 @@ h6 {
 /*----------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap");
 
-
 .main-menu li.dropdown-button {
     position: relative;
 }
 
-nav.offcanvas-menu.blurry, .blurry {
+nav.offcanvas-menu.blurry,
+.blurry {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(255, 255, 255, 0.85);
@@ -184,15 +185,111 @@ nav ul li span:hover {
     opacity: 1;
 }
 
-.splide.my-carousel { 
-  padding: 0;
+.splide.my-carousel {
+    padding: 0;
 }
 .splide__arrow svg {
-  fill: var(--brand) !important;
-  opacity: 0.4;
+    fill: var(--brand) !important;
+    opacity: 0.4;
 }
 .splide__pagination__page.is-active {
-  background: var(--brand) !important;
+    background: var(--brand) !important;
+}
+#main li {
+    margin-top:8px;
+}
+#main p,
+#main li {
+    font-size: 18px !important;
+    line-height: 1.2em;
+}
+#main h1 {
+    font-size: 48px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+#main h2 {
+    font-size: 36px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+#main h3 {
+    font-size: 28px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+#main h4 {
+    font-size: 24px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+#main dt,
+#main dt span {
+    font-size: 24px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+#main #contact-page dt,
+#main #contact-page dt span {
+    font-size: 24px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+#main dd,
+#main dd span {
+    font-size: 20px !important;
+}
+#main #contact-page dd {
+    margin-top: 0px !important;
+}
+#main #contact-page dd,
+#main #contact-page dd span {
+    font-size: 16px !important;
+}
+
+@media screen and (max-width: 600px) {
+    #main p,
+    #main li {
+        font-size: 18px !important;
+    }
+    #main h2 {
+        font-size: 26px !important;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+    #main h3 {
+        font-size: 22px !important;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+    #main h4 {
+        font-size: 17px !important;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+    #main dt,
+    #main dt span {
+        font-size: 18px !important;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+    #main #contact-page dt,
+    #main #contact-page dt span {
+        font-size: 18px !important;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+    #main dd,
+    #main dd span {
+        font-size: 16px !important;
+    }
+    #main #contact-page dd {
+        margin-top: 0px !important;
+    }
+    #main #contact-page dd,
+    #main #contact-page dd span {
+        font-size: 16px !important;
+    }
 }
 
 /* Shimmering */

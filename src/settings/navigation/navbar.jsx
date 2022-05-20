@@ -7,12 +7,12 @@ export const navbar = {
             {
                 title: "menu.about.title",
                 description: "menu.about.description",
-                href: "/about-us"
+                href: "/about-us#about-us"
             },
             {
                 title: "menu.visionMissionValues.title",
                 description: "menu.visionMissionValues.description",
-                href: "/about-us#mission"
+                href: "/about-us#vision"
             },
             {
                 title: "menu.quality.title",

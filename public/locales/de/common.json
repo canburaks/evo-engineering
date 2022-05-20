@@ -8,7 +8,7 @@
   "enterprise": "Unternehmen",
   "faq": "Häufig gestellte Fragen",
   "home": "Startseite",
-  "legal": "Gesetzlich",
+  "legal": "Legal",
   "privacy": "Datenschutz",
   "quicklinks": "Schnelllinks",
   "shipping": "Shipping Policy",
@@ -19,7 +19,7 @@
   "imprint": "Impressum",
   "whatWeDo": "Was wir tun?",
   "ourVision": "Unsere Vision",
-  "ourMission": "Unsere Aufgabe",
+  "ourMission": "Unsere Mission",
   "ourValues": "Unsere Werte",
   "quality": "Qualität & Umwelt",
   "management": "Management-Team",
@@ -65,6 +65,7 @@
       "metaDescription": "",
       "title": "Elektrifizierung der nächsten Generation | EVO-Engineering",
       "slogan": "",
+      "join": "Trete unserem Team bei",
       "featureSection": {
         "title": "Wir bewegen E-Mobilität und innovative Lösungen weltweit.",
         "description": "Als spezialisierter Automotive-Engineering-Partner unterstützen wir unsere Kunden und Partner bei der Entwicklung von Antrieben der Zukunft - weltweit, mit höchster Qualität, Effizienz und Sicherheit. ",
@@ -90,12 +91,31 @@
         "description": "Wir unterstützen unsere Kunden bei der Entwicklung zukünftiger Generationen elektrischer Antriebe in der Automobilindustrie."
       },
       "feature2": {
-        "title": "Unsere Aufgabe",
+        "title": "Unsere Mission",
         "description": "Electric mobility is our passion!"
       },
+      "faq":{
+        "title": "Über uns",
+        "description": "",
+        "questions":{
+          "q1": "Wer sind wir?",
+          "a1": "Die EVO Engineering GmbH treibt E-Mobilität und innovative Lösungen weltweit voran.",
+          "q2": "Was wir tun",
+          "a2": "Wir bieten unseren Kunden Engineering-Dienstleistungen für den Elektroantrieb der nächsten Generation mit höchster Qualität, Kompetenz, Flexibilität und Kosteneffizienz.",
+          "q3": "Was ist unsere Vision",
+          "a3": "Wir elektrifizieren Mobilität. Effiziente, sichere und saubere Antriebe für jedermann.",
+          "q4": "Was ist unsere Mission",
+          "a4": "Als spezialisierter Automotive-Engineering-Partner unterstützen wir unsere Kunden und Partner bei der Entwicklung von Antrieben der Zukunft - weltweit, mit höchster Qualität, Effizienz und Sicherheit."
+        }
+      },
+      "strip":{
+        "title": "Wir sind 'Qualitäter' aus Überzeugung",
+        "description":  "Durch die Einführung eines Qualitätsmanagementsystems (QMS) von Anfang an wollen wir die Einhaltung und korrekte Umsetzung aller Qualitätsmanagementanforderungen sicherstellen. Wir entwickeln unsere Kompetenzen kontinuierlich weiter, um unseren Kunden erstklassige Qualität bieten zu können und ihre Erwartungen zu erfüllen oder sogar zu übertreffen. "
+      },
       "fading-section": {
-        "title": "Was wir tun?",
-        "subtitle": "Wir bieten unseren Kunden Engineering-Dienstleistungen für den Elektroantrieb der nächsten Generation mit höchster Qualität, Kompetenz, Flexibilität und Kosteneffizienz.",
+        "subtitle": "Was wir tun?",
+        "title": "Unser Erfahrungsschatz",
+        "description": "Wir bieten unseren Kunden Engineering-Dienstleistungen für den Elektroantrieb der nächsten Generation mit höchster Qualität, Kompetenz, Flexibilität und Kosteneffizienz.",
         "expertise1": "Anforderungsmanagement",
         "expertise2": "Funktionsentwicklung",
         "expertise3": "System Engineering",
@@ -107,8 +127,8 @@
       "metaTitle": "Kontakt | EVO Engineering GmbH",
       "metaDescription": "Die Kontaktdaten der EVO Engineering GmbH",
       "title": "Die Kontaktdaten",
-      "tel": "<a rel='noopener nofollow' href='+498937458130'>+49 89 374 581 30</a>",
-      "fax": "<p>+49 89 374 581 32</p>",
+      "tel": "<a rel='noopener nofollow' href='tel:+498937458130'>+49 89 374 581 30</a>",
+      "fax": "+49 89 374 581 32",
       "email": "<a rel='noopener nofollow' href='mailto:info@evo-e.com'>info@evo-e.com</a>",
       "office": {
         "title": "Office",
@@ -122,6 +142,7 @@
       "metaTitle": "Über uns | EVO Engineering",
       "metaDescription": "",
       "title": "Über uns",
+      "visionAndMission": "Vision & Mission",
       "description": "Wir würden uns freuen, von Ihnen zu hören. Senden Sie uns eine E-Mail oder rufen Sie uns an.",
       "vision": {
         "title": "Vision",
@@ -150,6 +171,11 @@
           "title": "Nachhaltigkeit",
           "description": "Für eine bessere Welt von morgen."
         }
+      },
+      "infosec": {
+        "title": "Informationssicherheit",
+        "p1": "Unsere Geschäftstätigkeit hängt mehr und mehr von der Informations- und Kommunikationstechnologien (IKT) ab. Täglich tauschen wir intern wie extern Informationen aus, sei es mit Kunden, Mitarbeitern, Lieferanten oder anderer Anspruchsgruppen.",
+        "p2": "Der Schutz dieser Informationen in Bezug auf Vertraulichkeit, Verfügbarkeit und Integrität hat für uns oberste Priorität. Beim Aufbau und Betrieb unserer Infrastruktur, IT-Landschaft und der Schulung unserer Mitarbeiter orientieren wir uns an den Anforderungen etablierter Standards wie z.B. der ISO 27001 oder der VDA-ISA (TISAX)."
       }
     },
     "quality": {
@@ -236,6 +262,19 @@
         "title": "",
         "value": "Inhalt und Aufbau dieser Web-Seiten sind urheberrechtlich geschützt. Die Vervielfältigung von Informationen oder Daten, insbesondere die Verwendung von Texten, Texteilen oder Bildmaterial bedarf unserer vorherigen schriftlichen Zustimmung. Informationen zum Datenschutz finden Sie hier."
       }
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung",
+      "title1": "Allgemeines",
+      "p1": "Die Einhaltung der Datenschutzgesetze ist für die EVO Engineering GmbH nicht nur gesetzliche Pflicht, sondern auch ein wichtiger Vertrauensfaktor. Mit den nachfolgenden Datenschutzbestimmungen möchten wir Sie deshalb transparent über Art, Umfang und Zweck der von Ihnen erhobenen und verarbeiteten personenbezogenen Daten innerhalb dieses Internetauftritts sowie Ihre Rechte informieren. Personenbezogene Daten sind  in dem Falle alle Informationen, mit denen Sie persönlich identifiziert werden können. ",
+      "title2": "Verantwortlichkeit für die Datenverarbeitung ",
+      "p2": "As the operator of the website www.evo-e.com, EVO Engineering GmbH (hereinafter referred to as 'We') is the responsible party pursuant to Article 4 No. 7 of the EU General Data Protection Regulation (DSGVO). If you have any questions, you can contact info@evo-e.com.",
+      "title3": "Verantwortliche Stelle ",
+      "p3": "The data processing is carried out by EVO Engineering GmbH, Frankfurter Ring 105, 80807 Munich, Germany. Further contact details and company information can be found in the imprint of this website or in the privacy policy below.",
+      "title4": "Betroffenenrechte ",
+      "p4": "<p>Ihre Rechte als betroffene Person&nbsp;</p><p>Als betroffene Person haben Sie uns gegen&uuml;ber folgende Rechte hinsichtlich Ihrer personenbezogenen Daten. Sie haben:&nbsp;</p><ul><li>Ein Recht auf Auskunft unter anderem &uuml;ber die Kategorien der verarbeiteten Daten, der Verarbeitungszwecke, die Speicherdauer sowie etwaige Empf&auml;nger, gem&auml;&szlig; Art. 15 DSGVO und &sect; 34 BDSG.&nbsp;</li><li>Ein Recht auf Berichtigung oder L&ouml;schung unrichtiger bzw. unvollst&auml;ndiger Daten, gem&auml;&szlig; Art. 16 und 17 DSGVO und &sect; 35 BDSG.&nbsp;</li><li>Unter den Voraussetzungen des Art. 18 DSGVO oder &sect; 35 Abs. 1 S. 2 BDSG ein Recht auf Einschr&auml;nkung der Verarbeitung.&nbsp;&nbsp;</li><li>Ein Recht auf Widerspruch gegen die Verarbeitung gem&auml;&szlig; Art. 21 Abs.1 DSGVO, soweit die Datenverarbeitung aufgrund eines berechtigten Interesses erfolgte.&nbsp;</li><li>Ein Recht auf Widerruf einer abgegebenen Einwilligung mit Wirkung f&uuml;r die Zukunft gem&auml;&szlig; Art. 7 Abs. 3 DSGVO.&nbsp;</li><li>Ein Recht auf Daten&uuml;bertragbarkeit in einem g&auml;ngigen Format gem&auml;&szlig; Art. 20 DSGVO.&nbsp;</li><li>Sie haben gem&auml;&szlig; Art. 22 DSGVO ein Recht darauf, nicht einer ausschlie&szlig;lich auf einer automatisierten Verarbeitung beruhenden Entscheidung unterworfen zu werden, die Ihnen gegen&uuml;ber rechtliche Wirkung entfaltet oder Sie in &auml;hnlicher Weise erheblich beeintr&auml;chtigt. Dies umfasst auch Profiling im Sinne des Art. 4 Nr. 4 DSGVO.&nbsp;</li><li>Sie haben zudem das Recht, sich gem&auml;&szlig; Art. 77 DSGVO bei einer Datenschutz-Aufsichtsbeh&ouml;rde &uuml;ber die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren, insbesondere in dem Mitgliedstaat Ihres gew&ouml;hnlichen Aufenthaltsorts, Ihres Arbeitsplatzes oder des Orts des mutma&szlig;lichen Versto&szlig;es.&nbsp;</li></ul>",
+      "title5": "Verfahren",
+      "p5": "<p ><span >Wenn Sie Ihre Rechte nach der DSGVO und dem BDSG uns gegen&uuml;ber geltend machen, werden wir die von Ihnen dabei an uns &uuml;bermittelten Daten verarbeiten, um Ihren Anspruch zu erf&uuml;llen.</span><span >&nbsp;</span></p><p ><span >Im Anschluss speichern wir die von Ihnen an uns &uuml;bermittelten Daten und die von uns an Sie im Gegenzug &uuml;bermittelten Daten zum Zwecke der Dokumentation bis zum Ablauf der ordnungswidrigkeitenrechtlichen Verj&auml;hrungsfrist (3 Jahre).</span><span >&nbsp;</span></p><p ><span >Die Rechtsgrundlage f&uuml;r die Verarbeitung und Speicherung der Daten ist Art. 6 Abs. 1 S. 1 Buchstabe f) DSGVO (Berechtigtes Interesse an der Datenverarbeitung). Das berechtigte Interesse ergibt sich aus unserer Verpflichtung Ihrem Anliegen nachzukommen und dem Bedarf, uns in einem m&ouml;glichen Bu&szlig;geldverfahren entlasten zu k&ouml;nnen, indem wir nachweisen, dass wir Ihrem Anliegen ordnungsgem&auml;&szlig; nachgekommen sind.</span><span >&nbsp;</span></p><p ><span >Der Verarbeitung Ihrer Daten auf Grundlage unseres berechtigten Interesses k&ouml;nnen Sie jederzeit unter den Voraussetzungen des Art. 21 DSGVO widersprechen. Nutzen Sie hierf&uuml;r bitte die im Impressum genannten Kontaktdaten. Wir weisen aber darauf hin, dass die Verarbeitung Ihrer Daten zum Nachweis der Einhaltung der Betroffenenrechte zwingend im Sinne des Art. 21 Abs. 1 DSGVO ist, da andere Nachweism&ouml;glichkeiten nicht bestehen bzw. nicht gleicherma&szlig;en geeignet sind.</span><span >&nbsp;</span></p>"
     }
   }
 }

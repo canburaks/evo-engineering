@@ -54,10 +54,10 @@ export default function FadingSection({
             </div>
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
                 <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
-                    <h2 className="text-sm font-semibold text-indigo-300 tracking-wide uppercase">
+                    <h2 className="text-xl font-semibold text-indigo-300 tracking-wide uppercase">
                         {title}
                     </h2>
-                    <p className="mt-3 text-3xl font-extrabold text-white">
+                    <p className="mt-3 text-2xl font-extrabold text-white">
                         {subtitle}
                     </p>
                     {/*<p className="mt-5 text-lg text-gray-300">
@@ -69,7 +69,7 @@ export default function FadingSection({
                                 
                             </span>
                             <span className="mt-1 block text-base text-gray-300">
-                                <span className="font-medium text-white">{item1}</span>{" "}
+                                <span className="font-bold text-white">{item1}</span>{" "}
                             </span>
                         </p>
                         <p>
@@ -77,7 +77,7 @@ export default function FadingSection({
                                 
                             </span>
                             <span className="mt-1 block text-base text-gray-300">
-                                <span className="font-medium text-white">{item2}</span>{" "}
+                                <span className="font-bold text-white">{item2}</span>{" "}
                             </span>
                         </p>
                         <p>
@@ -85,7 +85,7 @@ export default function FadingSection({
                                 
                             </span>
                             <span className="mt-1 block text-base text-gray-300">
-                                <span className="font-medium text-white">{item3}</span>{" "}
+                                <span className="font-bold text-white">{item3}</span>{" "}
                             </span>
                         </p>
                         <p>
@@ -93,7 +93,7 @@ export default function FadingSection({
                                 
                             </span>
                             <span className="mt-1 block text-base text-gray-300">
-                                <span className="font-medium text-white">{item4}</span>{" "}
+                                <span className="font-bold text-white">{item4}</span>{" "}
                             </span>
                         </p>
                         <p>

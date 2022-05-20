@@ -1,4 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
+import { useRef, useEffect, useState } from "react"
 import {
     AnnotationIcon,
     GlobeAltIcon,
@@ -9,6 +10,27 @@ import {
 import { VideoCarousel } from "./video-carousel"
 
 export function FeatureSection({ title, description, values }) {
+    const [sizes, setSizes] = useState({
+        v1: { width: 490, height: 270 },
+        v2: { width: 490, height: 270 }
+    })
+    const vref1 = useRef(null)
+    const vref2 = useRef(null)
+
+    useEffect(() => {
+        if (vref1 && vref2 && vref1.current && vref2.current) {
+            const size1 = {
+                width: vref1.current.clientWidth,
+                height: vref1.current.clientHeight
+            }
+            const size2 = {
+                width: vref2.current.clientWidth,
+                height: vref2.current.clientHeight
+            }
+            setSizes({ v1: size1, v2: size2 })
+        }
+    })
+
     return (
         <div className="py-16 bg-gray-50 overflow-hidden lg:py-24">
             <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
@@ -47,7 +69,7 @@ export function FeatureSection({ title, description, values }) {
                 </svg>
 
                 <div className="relative">
-                    <h2 className="text-center mt-3 text-3xl font-extrabold text-gray-700 leading-8 tracking-tight sm:text-4xl">
+                    <h2 className="hidden md:block text-center mt-3 text-3xl font-extrabold text-gray-700 leading-8 tracking-tight sm:text-4xl">
                         {title}
                     </h2>
                     <p className="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
@@ -55,7 +77,7 @@ export function FeatureSection({ title, description, values }) {
                     </p>
                 </div>
 
-                <div className="px-8 relative mt-12 lg:mt-24 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+                <div className="px-8 relative mt-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center lg:justify-center">
                     <div className="relative">
                         <dl className="space-y-10">
                             {values.slice(0, 2).map((item) => (
@@ -70,9 +92,9 @@ export function FeatureSection({ title, description, values }) {
                                                 aria-hidden="true"
                                             />
                                         </div>
-                                        <p className="ml-16 text-lg -mt-12 leading-6 font-medium text-gray-900">
+                                        <h4 className="ml-16 -mt-12 tracking-wider uppercase text-8xl">
                                             {item.title}
-                                        </p>
+                                        </h4>
                                     </dt>
                                     <dd className="mt-2 ml-16 text-base text-gray-500">
                                         {item.description}
@@ -83,7 +105,7 @@ export function FeatureSection({ title, description, values }) {
                     </div>
 
                     <div
-                        className="mt-10 -mx-4 relative lg:mt-0"
+                        className="mt-32 -mx-4 relative lg:mt-0"
                         aria-hidden="true"
                     >
                         <svg
@@ -118,7 +140,7 @@ export function FeatureSection({ title, description, values }) {
                                 fill="url(#ca9667ae-9f92-4be7-abcb-9e3d727f2941)"
                             />
                         </svg>
-                        <div className="relative float-right w-full rounded-lg p-2">
+                        <div className="relative float-right w-full rounded-lg p-2 mb-16 md:mb-8">
                             {/*<img
                                 className="relative mx-auto rounded-lg shadow-lg"
                                 width={490}
@@ -126,23 +148,34 @@ export function FeatureSection({ title, description, values }) {
                                 alt=""
                             />*/}
                             <video
-                                className="relative mx-auto rounded-lg shadow-lg mb-12"
-                                width={490}
-                                height={270}
+                                ref={vref1}
+                                className="relative mx-auto rounded-lg shadow-lg mb-12 z-0"
+                                width={sizes.v1.width}
+                                height={sizes.v1.height}
                                 autoPlay
                                 muted
                                 loop
                                 src="/video/electrical-cars.mp4"
                                 type="video/mp4"
                             />
+                            <div
+                                style={{
+                                    position: "absolute",
+                                    top: 0,
+                                    left: 0,
+                                    right: 0,
+                                    bottom: 0,
+                                    zIndex:10
+                                }}
+                            ></div>
                         </div>
                     </div>
                 </div>
 
                 <svg
                     className="hidden lg:block absolute right-full transform translate-x-1/2 translate-y-12"
-                    width={404}
-                    height={784}
+                    width={sizes.v2.width}
+                    height={sizes.v2.height}
                     fill="none"
                     viewBox="0 0 404 784"
                     aria-hidden="true"
@@ -173,7 +206,7 @@ export function FeatureSection({ title, description, values }) {
                     />
                 </svg>
 
-                <div className="relative ">
+                <div className="relative mb-8">
                     <div className="px-8 lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                         <div className="lg:col-start-2">
                             <dl className="space-y-10">
@@ -189,9 +222,9 @@ export function FeatureSection({ title, description, values }) {
                                                     aria-hidden="true"
                                                 />
                                             </div>
-                                            <p className="ml-16 -mt-12 text-lg leading-6 font-medium text-gray-900">
+                                            <h4 className="ml-16 -mt-12 tracking-wider uppercase text-8xl">
                                                 {item.title}
-                                            </p>
+                                            </h4>
                                         </dt>
                                         <dd className="mt-2 ml-16 text-base text-gray-500">
                                             {item.description}
@@ -201,7 +234,7 @@ export function FeatureSection({ title, description, values }) {
                             </dl>
                         </div>
 
-                        <div className="mt-10 -mx-4 relative lg:mt-0 lg:col-start-1">
+                        <div className="mt-8 -mx-4 relative lg:mt-0 lg:col-start-1">
                             <svg
                                 className="absolute left-1/2 transform -translate-x-1/2 translate-y-16 lg:hidden"
                                 width={784}
@@ -243,6 +276,7 @@ export function FeatureSection({ title, description, values }) {
                                     alt="Electrical car"
                                 />*/}
                                 <video
+                                    ref={vref2}
                                     height={270}
                                     className="relative mx-auto rounded-lg shadow-lg"
                                     width={490}

@@ -1,9 +1,11 @@
 import Image from "next/image"
+import Link from "next/link"
 import { footer, s } from "../settings"
 import { i18n } from "next-i18next"
+import { useTranslation } from "next-i18next"
 
 const FooterBox = (props) => (
-    <div
+    <footer
         {...props}
         style={{
             background: "#161b22",
@@ -15,6 +17,8 @@ const FooterBox = (props) => (
 )
 
 export default function Footer() {
+    const { t, i18n } = useTranslation("common")
+
     return (
         <FooterBox aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">
@@ -27,10 +31,12 @@ export default function Footer() {
                             <a href="/">EVO Engineering GmbH</a>
                         </h3>
 
-                        <address className="text-gray-400 text-base mt-4">
-                            Frankfurter Ring 105, <br /> München, Bayern 80807,
-                            DE
-                        </address>
+                        <div
+                            dangerouslySetInnerHTML={{
+                                __html: t("pages.contact.office.content")
+                            }}
+                            className="text-gray-400 mt-4"
+                        />
                     </div>
                     <div className="grid md:grid-cols-1 md:gap-8 col-span-1 md:col-span-2 lg:col-span-1 mt-8">
                         {Object.keys(footer)
@@ -43,12 +49,13 @@ export default function Footer() {
                                     <ul className="mt-4 space-y-4">
                                         {footer[key].map((item) => (
                                             <li key={item.key}>
-                                                <a
+                                                <Link
                                                     href={item.href}
-                                                    className="text-base text-white hover-opacity"
                                                 >
-                                                    {i18n.t(item.key)}
-                                                </a>
+                                                    <a className="text-base text-white hover-opacity">
+                                                        {i18n.t(item.key)}
+                                                    </a>
+                                                </Link>
                                             </li>
                                         ))}
                                     </ul>
@@ -66,15 +73,13 @@ export default function Footer() {
                                     <ul className="mt-4 space-y-4">
                                         {footer[key].map((item) => (
                                             <li key={item.key}>
-                                                <a
-                                                    href={item.href}
-                                                    className="text-base text-white hover-opacity"
-                                                >
-                                                    {i18n.t(item.key)}
-                                                </a>
+                                                <Link href={item.href}>
+                                                    <a className="text-base text-white hover-opacity">
+                                                        {i18n.t(item.key)}
+                                                    </a>
+                                                </Link>
                                             </li>
                                         ))}
-                                        ))
                                     </ul>
                                 </div>
                             ))}
@@ -90,15 +95,15 @@ export default function Footer() {
                                     <ul className="mt-4 space-y-4">
                                         {footer[key].map((item) => (
                                             <li key={item.key}>
-                                                <a
-                                                    href={item.href}
-                                                    className="text-base text-white hover-opacity"
-                                                >
-                                                    {i18n.t(item.key)}
-                                                </a>
+                                                <Link href={item.href}>
+                                                    <a>
+                                                        <span className="text-base text-white hover-opacity">
+                                                            {i18n.t(item.key)}
+                                                        </span>
+                                                    </a>
+                                                </Link>
                                             </li>
                                         ))}
-                                        ))
                                     </ul>
                                 </div>
                             ))}
@@ -110,19 +115,21 @@ export default function Footer() {
                         {footer.social.map(
                             (item) =>
                                 s(item.key) && (
-                                    <a
-                                        key={item.key}
+                                    <Link
                                         href={s(item.key)}
+                                        key={item.key}
                                         className="text-gray-400 hover:text-gray-300  cursor-pointer"
                                     >
-                                        <span className="sr-only">
-                                            {item.key}
-                                        </span>
-                                        <item.icon
-                                            className="h-6 w-6"
-                                            aria-hidden="true"
-                                        />
-                                    </a>
+                                        <a>
+                                            <span className="sr-only">
+                                                {item.key}
+                                            </span>
+                                            <item.icon
+                                                className="h-6 w-6"
+                                                aria-hidden="true"
+                                            />
+                                        </a>
+                                    </Link>
                                 )
                         )}
                     </div>
@@ -135,22 +142,21 @@ export default function Footer() {
                 </div>
                 <div className="mt-8 border-t border-gray-700 pt-16 md:flex md:items-center md:justify-between">
                     <div className="w-full flex justify-center items-center -mb-8">
-                        <a
-                            href="https://webmeister.org"
-                            target="_blank"
-                            rel="noopener"
-                            style={{ opacity: 0.6 }}
-                        >
-                            <Image
-                                src={"/img/webmeister-white.png"}
-                                loader={myLoader}
-                                alt={"Developed and designed by"}
-                                layout="fixed"
-                                width={80}
-                                height={11}
-                                quality={70}
-                            />
-                        </a>
+                        <Link href="https://webmeister.org">
+                            <a
+                                target="_blank"
+                                rel="noopener"
+                                style={{ opacity: 0.6 }}
+                            >
+                                <img
+                                    src={"/img/webmeister-white.png"}
+                                    alt={"Developed and designed by"}
+                                    width={80}
+                                    height={11}
+                                    loading="lazy"
+                                />
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>

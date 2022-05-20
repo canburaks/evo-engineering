@@ -30,15 +30,26 @@ import {
     GlobeAltIcon,
     LightningBoltIcon,
     MailIcon,
-    ScaleIcon
+    ScaleIcon,
+    CloudUploadIcon,
+    CogIcon,
+    LockClosedIcon,
+    MenuIcon,
+    RefreshIcon,
+    ShieldCheckIcon,
+    XIcon,
+    ServerIcon
 } from "@heroicons/react/outline"
 import { Hero } from "../components/new-hero"
+import {
+    TestimonialSection,
+    FAQ,
+    ExpertiseSection
+} from "../components/demo/landing-page"
 
 function HomePage(props) {
     const { t, i18n } = useTranslation("common")
 
-    console.log("translate", t("pages"))
-    console.log("translate", t("pages.feature2.title"))
     return (
         <Fragment>
             <Head>
@@ -53,51 +64,101 @@ function HomePage(props) {
                 title="Next Generation Electrification"
                 description="We support our customers developing future generations of electric drives in the automotive sector."
             />
-            {/*<Hero heroItems={props.heroItems} data={site} />*/}
+            <div id="home-page">
+                {/*<Hero heroItems={props.heroItems} data={site} />*/}
+                <FeatureSection
+                    title={t("pages.home.featureSection.title")}
+                    description={t("pages.home.featureSection.title")}
+                    values={[
+                        {
+                            title: t("pages.home.featureSection.value1.title"),
+                            description: t(
+                                "pages.home.featureSection.value1.description"
+                            ),
+                            icon: GlobeAltIcon
+                        },
+                        {
+                            title: t("pages.home.featureSection.value2.title"),
+                            description: t(
+                                "pages.home.featureSection.value2.description"
+                            ),
+                            icon: ScaleIcon
+                        },
+                        {
+                            title: t("pages.home.featureSection.value3.title"),
+                            description: t(
+                                "pages.home.featureSection.value3.description"
+                            ),
+                            icon: LightningBoltIcon
+                        },
+                        {
+                            title: t("pages.home.featureSection.value4.title"),
+                            description: t(
+                                "pages.home.featureSection.value4.description"
+                            ),
+                            icon: AnnotationIcon
+                        }
+                    ]}
+                />
 
-            <FeatureSection
-                title={t("pages.home.featureSection.title")}
-                description={t("pages.home.featureSection.title")}
-                values={[
-                    {
-                        title: t("pages.home.featureSection.value1.title"),
-                        description: t(
-                            "pages.home.featureSection.value1.description"
-                        ),
-                        icon: GlobeAltIcon
-                    },
-                    {
-                        title: t("pages.home.featureSection.value2.title"),
-                        description: t(
-                            "pages.home.featureSection.value2.description"
-                        ),
-                        icon: ScaleIcon
-                    },
-                    {
-                        title: t("pages.home.featureSection.value3.title"),
-                        description: t(
-                            "pages.home.featureSection.value3.description"
-                        ),
-                        icon: LightningBoltIcon
-                    },
-                    {
-                        title: t("pages.home.featureSection.value4.title"),
-                        description: t(
-                            "pages.home.featureSection.value4.description"
-                        ),
-                        icon: AnnotationIcon
-                    }
-                ]}
-            />
-            <FadingSection
-                title={t("pages.home.fading-section.title")}
-                subtitle={t("pages.home.fading-section.subtitle")}
-                item1={t("pages.home.fading-section.expertise1")}
-                item2={t("pages.home.fading-section.expertise2")}
-                item3={t("pages.home.fading-section.expertise3")}
-                item4={t("pages.home.fading-section.expertise4")}
-                item5={t("pages.home.fading-section.expertise5")}
-            />
+                <ExpertiseSection
+                    subtitle={t("pages.home.fading-section.subtitle")}
+                    title={t("pages.home.fading-section.title")}
+                    description={t("pages.home.fading-section.description")}
+                    features={[
+                        {
+                            title: t("pages.home.fading-section.expertise1"),
+                            icon: "/img/vr.webp"
+                        },
+                        {
+                            title: t("pages.home.fading-section.expertise2"),
+                            icon: "/img/female-engineer.webp"
+                        },
+                        {
+                            title: t("pages.home.fading-section.expertise3"),
+                            icon: "/img/female-it.webp"
+                        },
+                        {
+                            title: t("pages.home.fading-section.expertise4"),
+                            icon: "/img/robotics.webp"
+                        }
+                    ]}
+                    linkTitle={t("pages.about.title")}
+                />
+
+                <TestimonialSection
+                    src={"/img/white-verticall.webp"}
+                    title={undefined}
+                    buttonText={t("pages.home.join")}
+                />
+
+                <FAQ
+                    title={t("pages.home.faq.title")}
+                    description={t("pages.home.faq.description")}
+                    questions={[
+                        {
+                            id: "faq-1",
+                            question: t("pages.home.faq.questions.q1"),
+                            answer: t("pages.home.faq.questions.a1")
+                        },
+                        {
+                            id: "faq-2",
+                            question: t("pages.home.faq.questions.q2"),
+                            answer: t("pages.home.faq.questions.a2")
+                        },
+                        {
+                            id: "faq-3",
+                            question: t("pages.home.faq.questions.q3"),
+                            answer: t("pages.home.faq.questions.a3")
+                        },
+                        {
+                            id: "faq-4",
+                            question: t("pages.home.faq.questions.q4"),
+                            answer: t("pages.home.faq.questions.a4")
+                        }
+                    ]}
+                />
+            </div>
         </Fragment>
     )
 }

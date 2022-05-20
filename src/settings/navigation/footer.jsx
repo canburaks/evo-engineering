@@ -6,7 +6,7 @@ export const footer = {
         },
         {
             key: "menu.about.title",
-            href: "/about-us"
+            href: "/about-us#about-us"
         },
         {
             key: "menu.contact.title",
@@ -19,11 +19,7 @@ export const footer = {
     ],
     about: [
         {
-            key: "ourMission",
-            href: "/about-us#mission"
-        },
-        {
-            key: "ourVision",
+            key: "Mission & Vision",
             href: "/about-us#vision"
         },
         {
@@ -46,7 +42,8 @@ export const footer = {
         },
         {
             key: "tos",
-            href: "/legal/terms-of-service"
+            href: "#"
+            //href: "/legal/terms-of-service"
         }
     ],
     social: [

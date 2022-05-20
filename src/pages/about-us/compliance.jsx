@@ -137,58 +137,15 @@ const CompliancePage = () => {
                 />
             </Head>
             <div className="bg-white">
-                <section className="bg-white dark:bg-gray-900">
-                    <div className="container px-6 py-10 mx-auto">
-                        <div className="lg:flex lg:items-center">
-                            <div className="w-full space-y-12 lg:w-1/2 ">
-                                <div>
-                                    <h1 className="text-3xl font-semibold text-gray-200 capitalize lg:text-4xl">
-                                        {t("pages.compliance.title")}
-                                        <br />
-                                    </h1>
-
-                                    <div className="mt-2">
-                                        <span className="inline-block w-40 h-1 rounded-full bg-blue-500"></span>
-                                        <span className="inline-block w-3 h-1 ml-1 rounded-full bg-blue-500"></span>
-                                        <span className="inline-block w-1 h-1 ml-1 rounded-full bg-blue-500"></span>
-                                    </div>
-                                </div>
-
-                                <div className="md:flex md:items-start md:-mx-4">
-                                    <span className="inline-block p-2 text-orange-500 bg-blue-100 rounded-xl md:mx-4 dark:bg-orange-500"></span>
-
-                                    <div className="md:mx-4 md:mt-0">
-                                        <h2
-                                            className="text-2xl  text-gray-200 capitalize"
-                                            id="mission"
-                                        >
-                                            {t("pages.compliance.description")}
-                                        </h2>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
-                                <img
-                                    className="w-[20rem] h-[20rem] object-cover xl:w-[28rem] xl:h-[28rem] rounded-full"
-                                    src="/img/compliance.webp"
-                                    alt="EVO Engineering electrical cars"
-                                />
-                            </div>
-                        </div>
-
-                        <StyledSeparator className="border-gray-200 my-12 dark:border-gray-700" />
-                    </div>
-                </section>
-                <div className="py-16 bg-gray-50 overflow-hidden">
-                    <div className="max-w-7xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
+                <div className="py-16 pb-60 bg-gray-50 overflow-hidden">
+                    <div className="max-w-6xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
                         <div className="text-base max-w-prose mx-auto lg:max-w-none">
-                            <h2 className="text-base text-orange-600 font-semibold tracking-wide uppercase">
+                            <span className="text-base text-orange-600 font-semibold tracking-wide uppercase">
                                 EVO ENGINEERING
-                            </h2>
-                            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                            </span>
+                            <h1 className="text-3xl mt-4 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                                 {t("pages.compliance.title")}
-                            </p>
+                            </h1>
                         </div>
                         <div className="relative z-10 text-base max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
                             <p className="text-lg text-gray-500">

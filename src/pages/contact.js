@@ -44,7 +44,7 @@ function ContactPage(props) {
                     content={t("pages.contact.metaDescription")}
                 />
             </Head>
-            <div className="bg-white">
+            <div className="bg-white" id="contact-page">
                 <div
                     className="max-w-5xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8"
                     ref={myref}
@@ -53,7 +53,7 @@ function ContactPage(props) {
                         {t("pages.contact.title")}
                     </h1>
 
-                    <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
                         <div>
                             <h3 className="text-lg font-medium text-gray-900 lg:text-xl">
                                 {t("pages.contact.office.title")}
@@ -69,13 +69,11 @@ function ContactPage(props) {
                             <h3 className="text-lg font-medium text-gray-900 lg:text-xl">
                                 {t("pages.contact.communication.title")}
                             </h3>
-                            <dl className="mt-8 space-y-6">
-                                <dt>
-                                    <span className="sr-only">Email</span>
-                                </dt>
-                                <dd className="flex text-base text-gray-500">
+                            <div className="mt-8 space-y-6">
+
+                                <span className="flex text-base text-gray-500">
                                     <MailIcon
-                                        className="flex-shrink-0 w-6 h-6 text-gray-700"
+                                        className="flex-shrink-0 w-5 h-5 text-gray-700"
                                         aria-hidden="true"
                                     />
                                     <span
@@ -84,15 +82,11 @@ function ContactPage(props) {
                                             __html: t("pages.contact.email")
                                         }}
                                     />
-                                </dd>
-                                <dt>
-                                    <span className="sr-only">
-                                        Phone number
-                                    </span>
-                                </dt>
-                                <dd className="flex text-base text-gray-500">
+                                </span>
+
+                                <span className="flex text-base text-gray-500">
                                     <PhoneIcon
-                                        className="flex-shrink-0 w-6 h-6 text-gray-700"
+                                        className="flex-shrink-0 w-5 h-5 text-gray-700"
                                         aria-hidden="true"
                                     />
                                     <span
@@ -101,14 +95,11 @@ function ContactPage(props) {
                                             __html: t("pages.contact.tel")
                                         }}
                                     />
-                                </dd>
+                                </span>
 
-                                <dt>
-                                    <span className="sr-only">Fax</span>
-                                </dt>
-                                <dd className="flex text-base text-gray-500">
+                                <span className="flex text-base text-gray-500">
                                     <PrinterIcon
-                                        className="flex-shrink-0 w-6 h-6 text-gray-700"
+                                        className="flex-shrink-0 w-5 h-5 text-gray-700"
                                         aria-hidden="true"
                                     />
                                     <span
@@ -117,8 +108,8 @@ function ContactPage(props) {
                                             __html: t("pages.contact.fax")
                                         }}
                                     />
-                                </dd>
-                            </dl>
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <StyledSeparator css={{ backgroundColor: "#ccc" }} />
