@@ -195,11 +195,27 @@ nav ul li span:hover {
 .splide__pagination__page.is-active {
     background: var(--brand) !important;
 }
-#main li {
-    margin-top:8px;
+
+#main #imprint p, #main #imprint dd {
+    font-size: 16px !important;
 }
-#main p,
-#main li {
+#main #privacy * {
+    line-height: 1.7em;
+}
+#main #privacy p {
+    font-size: 16px !important;
+    margin-top:8px;
+    margin-bottom:8px;
+    line-height: 2rem;
+}
+#main #privacy h2, #main #privacy h3 {
+    margin-top:64px;
+    margin-bottom:16px;
+}
+#main #imprint dt {
+    font-size: 20px !important;
+}
+#main p {
     font-size: 18px !important;
     line-height: 1.2em;
 }
@@ -248,8 +264,7 @@ nav ul li span:hover {
 }
 
 @media screen and (max-width: 600px) {
-    #main p,
-    #main li {
+    #main p {
         font-size: 18px !important;
     }
     #main h2 {
@@ -293,3 +308,29 @@ nav ul li span:hover {
 }
 
 /* Shimmering */
+:-moz-selection { color: #fff; background: hsla(23, 100%, 60%, 1.0);}
+::selection { color: #fff; background: hsla(23, 100%, 60%, 1.0);}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: hsla(23, 100%, 1%, 1.0);
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(23, 100%, 10%, 1.0);
+}

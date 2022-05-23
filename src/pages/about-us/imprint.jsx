@@ -43,7 +43,7 @@ const ImprintPage = () => {
                     content={t("pages.about.metaDescription")}
                 />
             </Head>
-            <div className="bg-white">
+            <div className="bg-white" id="imprint">
                 <section className="bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 py-20">
                     <div className="container px-6 py-10 mx-auto">
                         <div className="bg-white shadow overflow-hidden sm:rounded-lg">

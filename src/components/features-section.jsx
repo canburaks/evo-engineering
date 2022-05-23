@@ -27,9 +27,14 @@ export function FeatureSection({ title, description, values }) {
                 width: vref2.current.clientWidth,
                 height: vref2.current.clientHeight
             }
-            setSizes({ v1: size1, v2: size2 })
+            if (
+                Math.floor(sizes.v1.width) !==
+                Math.floor(vref1.current.clientWidth)
+            ) {
+                setSizes({ v1: size1, v2: size2 })
+            }
         }
-    })
+    }, [vref1, vref2])
 
     return (
         <div className="py-16 bg-gray-50 overflow-hidden lg:py-24">
@@ -79,29 +84,29 @@ export function FeatureSection({ title, description, values }) {
 
                 <div className="px-8 relative mt-12 lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center lg:justify-center">
                     <div className="relative">
-                        <dl className="space-y-10">
+                        <div className="space-y-10">
                             {values.slice(0, 2).map((item) => (
                                 <div
                                     key={item.title.replace(" ", "-")}
                                     className="relative"
                                 >
-                                    <dt>
+                                    <div className="">
                                         <div className="relative flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white">
                                             <item.icon
                                                 className="h-6 w-6"
                                                 aria-hidden="true"
                                             />
                                         </div>
-                                        <h4 className="ml-16 -mt-12 tracking-wider uppercase text-8xl">
+                                        <h4 className="ml-16 -mt-8 tracking-wider uppercase text-8xl">
                                             {item.title}
                                         </h4>
-                                    </dt>
-                                    <dd className="mt-2 ml-16 text-base text-gray-500">
+                                    </div>
+                                    <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500 pt-2">
                                         {item.description}
-                                    </dd>
+                                    </p>
                                 </div>
                             ))}
-                        </dl>
+                        </div>
                     </div>
 
                     <div
@@ -165,7 +170,7 @@ export function FeatureSection({ title, description, values }) {
                                     left: 0,
                                     right: 0,
                                     bottom: 0,
-                                    zIndex:10
+                                    zIndex: 10
                                 }}
                             ></div>
                         </div>
@@ -209,29 +214,29 @@ export function FeatureSection({ title, description, values }) {
                 <div className="relative mb-8">
                     <div className="px-8 lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
                         <div className="lg:col-start-2">
-                            <dl className="space-y-10">
+                            <div className="space-y-10">
                                 {values.slice(2, 4).map((item) => (
                                     <div
                                         key={item.title.replace(" ", "-")}
                                         className="relative"
                                     >
-                                        <dt>
+                                        <div>
                                             <div className="relatvie flex items-center justify-center h-12 w-12 rounded-md bg-orange-500 text-white">
                                                 <item.icon
                                                     className="h-6 w-6"
                                                     aria-hidden="true"
                                                 />
                                             </div>
-                                            <h4 className="ml-16 -mt-12 tracking-wider uppercase text-8xl">
+                                            <h4 className="ml-16 -mt-8 tracking-wider uppercase text-8xl">
                                                 {item.title}
                                             </h4>
-                                        </dt>
-                                        <dd className="mt-2 ml-16 text-base text-gray-500">
+                                        </div>
+                                        <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500 pt-2">
                                             {item.description}
-                                        </dd>
+                                        </p>
                                     </div>
                                 ))}
-                            </dl>
+                            </div>
                         </div>
 
                         <div className="mt-8 -mx-4 relative lg:mt-0 lg:col-start-1">

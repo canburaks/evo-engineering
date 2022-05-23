@@ -61,8 +61,8 @@
   },
   "pages": {
     "home": {
-      "metaTitle": "Elektrifizierung der nächsten Generation | EVO-Engineering",
-      "metaDescription": "",
+      "metaTitle": "Elektrifizierung der nächsten Generation - EVO-E | EVO-Engineering",
+      "metaDescription": "Die EVO Engineering GmbH treibt E-Mobilität und innovative Lösungen weltweit voran.",
       "title": "Elektrifizierung der nächsten Generation | EVO-Engineering",
       "slogan": "",
       "join": "Trete unserem Team bei",
@@ -124,7 +124,7 @@
       }
     },
     "contact": {
-      "metaTitle": "Kontakt | EVO Engineering GmbH",
+      "metaTitle": "Kontakt EVO-E | EVO Engineering GmbH",
       "metaDescription": "Die Kontaktdaten der EVO Engineering GmbH",
       "title": "Die Kontaktdaten",
       "tel": "<a rel='noopener nofollow' href='tel:+498937458130'>+49 89 374 581 30</a>",
@@ -139,8 +139,8 @@
       }
     },
     "about": {
-      "metaTitle": "Über uns | EVO Engineering",
-      "metaDescription": "",
+      "metaTitle": "Über uns - EVO-E | EVO Engineering",
+      "metaDescription": "Wir bieten unseren Kunden Engineering-Dienstleistungen für den Elektroantrieb der nächsten Generation mit höchster Qualität, Kompetenz, Flexibilität und Kosteneffizienz.",
       "title": "Über uns",
       "visionAndMission": "Vision & Mission",
       "description": "Wir würden uns freuen, von Ihnen zu hören. Senden Sie uns eine E-Mail oder rufen Sie uns an.",
@@ -171,6 +171,14 @@
           "title": "Nachhaltigkeit",
           "description": "Für eine bessere Welt von morgen."
         }
+      },
+      "quality":{
+        "title":"Qualität",
+        "p1": "Wir sind 'Qualitäter' aus Überzeugung. ",
+        "p2": "Grundlage unseres Qualitätsmanagement-Systems (QMS) sind internationale Standards wie ISO 9001 sowie Kunden-, gesetzliche und andere Anforderungen.",
+        "p3": "Durch die Einführung eines Qualitätsmanagementsystems (QMS) von Anfang an wollen wir die Einhaltung und korrekte Umsetzung aller Qualitätsmanagementanforderungen sicherstellen.",
+        "p4": "Wir entwickeln unsere Kompetenzen kontinuierlich weiter, um unseren Kunden erstklassige Qualität bieten zu können und ihre Erwartungen zu erfüllen oder sogar zu übertreffen.",
+        "p5": "Die EVO-Geschäftsleitung verpflichtet sich, das QMS zu betreiben, aufrechtzuerhalten und kontinuierlich zu verbessern, und stelletsicher, dass diese Politik auf allen Ebenen der EVO-Mitarbeiter kommuniziert und umgesetzt wird."
       },
       "infosec": {
         "title": "Informationssicherheit",
@@ -212,6 +220,8 @@
       }
     },
     "imprint": {
+      "metaTitle": "Impressum | EVO Engineering GmbH",
+      "metaDescription": "EVO-E Impressum.",
       "title": "Impressum",
       "subtitle": "EVO Engineering GmbH",
       "item1": {
@@ -264,6 +274,8 @@
       }
     },
     "privacy": {
+      "metaTitle": "Privacy Policy | EVO Engineering GmbH",
+      "metaDescription": "Die Einhaltung der Datenschutzgesetze ist für die EVO Engineering GmbH nicht nur gesetzliche Pflicht, sondern auch ein wichtiger Vertrauensfaktor. ",
       "title": "Datenschutzerklärung",
       "title1": "Allgemeines",
       "p1": "Die Einhaltung der Datenschutzgesetze ist für die EVO Engineering GmbH nicht nur gesetzliche Pflicht, sondern auch ein wichtiger Vertrauensfaktor. Mit den nachfolgenden Datenschutzbestimmungen möchten wir Sie deshalb transparent über Art, Umfang und Zweck der von Ihnen erhobenen und verarbeiteten personenbezogenen Daten innerhalb dieses Internetauftritts sowie Ihre Rechte informieren. Personenbezogene Daten sind  in dem Falle alle Informationen, mit denen Sie persönlich identifiziert werden können. ",

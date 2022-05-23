@@ -375,37 +375,7 @@ const ContentListItemCallout = React.forwardRef(
         </ListItem>
     )
 )
-const ContentListItemCallout2 = React.forwardRef(
-    ({ children, ...props }, forwardedRef) => (
-        <ListItem css={{ gridRow: "span 3" }}>
-            <NavigationMenuLink
-                {...props}
-                href={props.href}
-                ref={forwardedRef}
-                css={{
-                    display: "flex",
-                    justifyContent: "flex-end",
-                    flexDirection: "column",
-                    width: "300",
-                    height: "100%",
-                    background: `linear-gradient(135deg, ${teal.teal7} 0%, ${cyan.cyan11} 100%);`,
-                    borderRadius: 6,
-                    padding: 0
-                }}
-            >
-                <Image
-                    src={props.src}
-                    //width="100%"
-                    width="300"
-                    height="400"
-                    //height="auto"
-                    layout="responsive"
-                    //objectFit
-                />
-            </NavigationMenuLink>
-        </ListItem>
-    )
-)
+
 const ViewportPosition = styled("div", {
     position: "absolute",
     display: "flex",
@@ -686,7 +656,7 @@ export const MyNavigationMenu = () => {
                                 <Link href="/">
                                     <a>
                                         <Image
-                                            src="/img/_evo/evo-e-logo.webp"
+                                            src="/img/_evo/evo-e.svg"
                                             alt="Logo"
                                             width={220}
                                             height={94}

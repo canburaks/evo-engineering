@@ -108,11 +108,11 @@ function HomePage(props) {
                     features={[
                         {
                             title: t("pages.home.fading-section.expertise1"),
-                            icon: "/img/vr.webp"
+                            icon: "/img/requirements-engineering.webp"
                         },
                         {
                             title: t("pages.home.fading-section.expertise2"),
-                            icon: "/img/female-engineer.webp"
+                            icon: "/img/function-engineering.webp"
                         },
                         {
                             title: t("pages.home.fading-section.expertise3"),

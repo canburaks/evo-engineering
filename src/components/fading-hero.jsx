@@ -9,11 +9,13 @@ export const FadingHero = ({
     title1,
     title2,
     title3,
+    title4,
     description,
     src,
     items1,
     items2,
-    items3
+    items3,
+    items4
 }) => {
     const { t, i18n } = useTranslation("common")
 
@@ -99,22 +101,18 @@ export const FadingHero = ({
                         }
                     ]}
                 />
+                <div className="min-h-10 mb-20 relative" id="vision"></div>
                 <div className="w-full relative">
-                    <h2
-                        id="vision"
-                        className="text-2xl md:text-3xl z-10 relative text-left mt-32 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-                    >
+                    <h2 className="text-2xl md:text-3xl z-10 relative text-left mt-32 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                         {title1}
                     </h2>
 
-                    <div
-                        id="mission"
-                        className="mt-16 border-t border-gray-200 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:gap-x-8"
-                    >
+                    <div className="mt-16 border-t border-gray-200 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:gap-x-8">
                         <div className="col-span-1 pt-8 rounded-lg">
                             <img
                                 src={"/img/team.webp"}
                                 className="rounded-lg z-10 relative shadow-xl"
+                                alt="EVO-E Vision"
                             />
                         </div>
                         <div className="flex flex-col">
@@ -166,10 +164,9 @@ export const FadingHero = ({
                         />
                     </svg>
 
-                    <h2
-                        id="values"
-                        className="text-2xl md:text-3xl z-10 relative text-left mt-60 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-                    >
+                    <div className="min-h-10 mb-20 relative" id="values"></div>
+
+                    <h2 className="text-2xl md:text-3xl z-10 relative text-left mt-60 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                         {title2}
                     </h2>
                     <div className="mt-16 z-10 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:gap-x-8 border-t border-gray-200 ">
@@ -189,10 +186,36 @@ export const FadingHero = ({
                             <img
                                 src={"/img/office-1.webp"}
                                 className="rounded-lg z-10 shadow-xl"
+                                alt="EVO-E Values"
                             />
                         </div>
                     </div>
                 </div>
+
+                <div className="min-h-10 mb-20 relative" id="quality"></div>
+
+                <div className="w-full relative">
+                    <h2 className="text-2xl md:text-3xl z-10 relative text-left mt-32 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                        {title4}
+                    </h2>
+
+                    <div className="mt-8 border-t border-gray-200 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:gap-y-16 lg:max-w-none lg:gap-x-8">
+                        <div className="mt-8">
+                            {" "}
+                            <img
+                                src={"/img/quality.webp"}
+                                alt="EVO-E Quality"
+                                className="rounded-lg z-10 relative shadow-xl float-left w-full md:max-w-[44%] mb-4 mr-8"
+                            />
+                            {items4.map((item) => (
+                                <p className="text-base text-gray-500 mb-8" key={item.text.slice(0,10)}>
+                                    {item.text}
+                                </p>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
                 <div className="w-full relative">
                     <svg
                         className="absolute -top-[5%] left-0   lg:left-1/2 lg:ml-0  xl:left-0  xl:-ml-20 z-0"

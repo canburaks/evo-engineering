@@ -36,12 +36,13 @@ const AboutPage = () => {
             </Head>
             <div className="bg-white">
                 <FadingHero
-                src={"/img/office.webp"}
+                    src={"/img/office.webp"}
                     title={t("pages.about.title")}
                     description={t("pages.about.mission.description")}
                     title1={t("pages.about.visionAndMission")}
                     title2={t("pages.about.values.title")}
                     title3={t("pages.about.infosec.title")}
+                    title4={t("pages.about.quality.title")}
                     items1={[
                         {
                             title: t("pages.about.vision.title"),
@@ -81,6 +82,13 @@ const AboutPage = () => {
                     items3={[
                         { text: t("pages.about.infosec.p1") },
                         { text: t("pages.about.infosec.p2") }
+                    ]}
+                    items4={[
+                        { text: t("pages.about.quality.p1") },
+                        { text: t("pages.about.quality.p2") },
+                        { text: t("pages.about.quality.p3") },
+                        { text: t("pages.about.quality.p4") },
+                        { text: t("pages.about.quality.p5") }
                     ]}
                 />
             </div>
