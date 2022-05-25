@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://evo-e.com
+
+# Sitemaps
+Sitemap: https://evo-e.com/sitemap.xml
