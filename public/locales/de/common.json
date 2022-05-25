@@ -94,10 +94,10 @@
         "title": "Unsere Mission",
         "description": "Electric mobility is our passion!"
       },
-      "faq":{
+      "faq": {
         "title": "Über uns",
         "description": "",
-        "questions":{
+        "questions": {
           "q1": "Wer sind wir?",
           "a1": "Die EVO Engineering GmbH treibt E-Mobilität und innovative Lösungen weltweit voran.",
           "q2": "Was wir tun",
@@ -108,10 +108,6 @@
           "a4": "Als spezialisierter Automotive-Engineering-Partner unterstützen wir unsere Kunden und Partner bei der Entwicklung von Antrieben der Zukunft - weltweit, mit höchster Qualität, Effizienz und Sicherheit."
         }
       },
-      "strip":{
-        "title": "Wir sind 'Qualitäter' aus Überzeugung",
-        "description":  "Durch die Einführung eines Qualitätsmanagementsystems (QMS) von Anfang an wollen wir die Einhaltung und korrekte Umsetzung aller Qualitätsmanagementanforderungen sicherstellen. Wir entwickeln unsere Kompetenzen kontinuierlich weiter, um unseren Kunden erstklassige Qualität bieten zu können und ihre Erwartungen zu erfüllen oder sogar zu übertreffen. "
-      },
       "fading-section": {
         "subtitle": "Was wir tun?",
         "title": "Unser Erfahrungsschatz",
@@ -121,6 +117,10 @@
         "expertise3": "System Engineering",
         "expertise4": "Test und Absicherung",
         "expertise5": "Projektmanagement - klassisch und agil"
+      },
+      "strip": {
+        "title": "Wir sind 'Qualitäter' aus Überzeugung",
+        "description": "Durch die Einführung eines Qualitätsmanagementsystems (QMS) von Anfang an wollen wir die Einhaltung und korrekte Umsetzung aller Qualitätsmanagementanforderungen sicherstellen. Wir entwickeln unsere Kompetenzen kontinuierlich weiter, um unseren Kunden erstklassige Qualität bieten zu können und ihre Erwartungen zu erfüllen oder sogar zu übertreffen. "
       }
     },
     "contact": {
@@ -172,8 +172,8 @@
           "description": "Für eine bessere Welt von morgen."
         }
       },
-      "quality":{
-        "title":"Qualität",
+      "quality": {
+        "title": "Qualität",
         "p1": "Wir sind 'Qualitäter' aus Überzeugung. ",
         "p2": "Grundlage unseres Qualitätsmanagement-Systems (QMS) sind internationale Standards wie ISO 9001 sowie Kunden-, gesetzliche und andere Anforderungen.",
         "p3": "Durch die Einführung eines Qualitätsmanagementsystems (QMS) von Anfang an wollen wir die Einhaltung und korrekte Umsetzung aller Qualitätsmanagementanforderungen sicherstellen.",
@@ -256,7 +256,7 @@
         "title": "Umsatzsteuer-ID",
         "value": "DE350259145"
       },
-      "item10":{
+      "item10": {
         "title": "Tel",
         "value": "+49 89 374 581 30"
       },

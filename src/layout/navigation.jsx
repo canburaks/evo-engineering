@@ -249,35 +249,38 @@ const ContentList = styled("ul", {
     margin: 0,
     columnGap: 10,
     listStyle: "none",
+    rowGap: 0,
 
     variants: {
         layout: {
             one: {
                 "@media only screen and (min-width: 600px)": {
-                    width: 500,
+                    width: 400,
                     gridTemplateColumns: ".75fr 1fr",
                     height: "100%"
                 }
             },
             two: {
                 "@media only screen and (min-width: 600px)": {
-                    width: 500,
+                    width: 400,
                     gridTemplateColumns: "1fr 0.75fr"
                 }
             },
             three: {
                 "@media only screen and (min-width: 600px)": {
-                    width: 600,
+                    width: 400,
                     gridAutoFlow: "column",
                     gridTemplateRows: "repeat(3, 1fr)"
                 }
             },
             four: {
                 "@media only screen and (min-width: 600px)": {
-                    width: 600,
+                    width: 450,
                     gridAutoFlow: "column",
-                    gridTemplateRows: "repeat(4, 1fr)",
-                    gridTemplateColumns: "0.75fr 1fr"
+                    rowGap:0,
+
+                    gridTemplateRows: "repeat(4, 0.5fr)",
+                    gridTemplateColumns: "0.5fr 1fr"
                 }
             }
         }
@@ -306,7 +309,7 @@ export const ListItem = styled("li", {
 export const LinkTitle = styled("div", {
     fontWeight: 500,
     lineHeight: 1.2,
-    marginBottom: 5,
+    margin: 0,
     color: orange.orange12
 })
 
@@ -350,7 +353,7 @@ const ContentListItemCallout = React.forwardRef(
                     display: "flex",
                     justifyContent: "flex-end",
                     flexDirection: "column",
-                    width: "300",
+                    width: "200",
                     height: "100%",
                     borderRadius: 6,
                     padding: 0
@@ -362,11 +365,15 @@ const ContentListItemCallout = React.forwardRef(
                         <Image
                             src={props.src}
                             //width="100%"
-                            width={props.imageWidth || "300"}
-                            height={props.imageHeight || "400"}
+                            width={props.imageWidth || "150"}
+                            height={props.imageHeight || "200"}
                             //height="auto"
                             layout="responsive"
-                            css={{ borderRadius: 6 }}
+                            css={{
+                                borderRadius: 6,
+                                width: props.imageWidth,
+                                height: props.imageHeight
+                            }}
                             //objectFit
                         />
                     </a>
@@ -476,8 +483,8 @@ export const MyNavigationMenu = () => {
                                     src={"/img/charge-station.webp"}
                                     href={navbar.about.children[0].href}
                                     rel={navbar.about.children[0].rel}
-                                    imageWidth="300"
-                                    imageHeight="400"
+                                    imageWidth="150"
+                                    imageHeight="200"
                                     imageTitle={t(
                                         navbar.about.children[0].description
                                     )}

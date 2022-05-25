@@ -128,7 +128,8 @@ function HomePage(props) {
 
                 <TestimonialSection
                     src={"/img/white-verticall.webp"}
-                    title={undefined}
+                    title={t("pages.home.strip.title")}
+                    description={t("pages.home.strip.description")}
                     buttonText={t("pages.home.join")}
                 />
 

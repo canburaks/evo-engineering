@@ -117,11 +117,11 @@
         "expertise3": "System engineering",
         "expertise4": "Test and Validation",
         "expertise5": "Project management - classical and agile"
+      },
+      "strip": {
+        "title": "We are qualiteers from the bottom of our hearts",
+        "description": "By establishing a quality management system right from the very beginning we aim to ensure compliance with and correct implementation of all quality management requirements. We continuously develop our competencies to be able to offer best-of-class quality to our customers and to meet or  rather exceed their expectations."
       }
-    },
-    "strip": {
-      "title": "We are qualiteers from the bottom of our hearts",
-      "description": "By establishing a quality management system right from the very beginning we aim to ensure compliance with and correct implementation of all quality management requirements. We continuously develop our competencies to be able to offer best-of-class quality to our customers and to meet or  rather exceed their expectations."
     },
     "contact": {
       "metaTitle": "Contact EVO-E | EVO Engineering GmbH",

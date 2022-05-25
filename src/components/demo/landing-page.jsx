@@ -344,12 +344,12 @@ export const ExpertiseSection = ({
                                     <h4 className="mt-8 mb-6 absolute bottom-0 group-hover:bottom-6 ease-out duration-700 w-full uppercase text-2xl font-black text-gray-50 tracking-tight ">
                                         {feature.title}
                                     </h4>
-                                    <Link href={"/about/us"}>
+                                    {/*<Link href={"#"}>
                                         <a
                                             className="absolute top-0 bottom-0 left-0 right-0"
                                             title={linkTitle}
                                         ></a>
-                                    </Link>
+                                    </Link>*/}
                                     {/*<p className="mt-5 text-base text-gray-500">
                                         {feature.description}
                                     </p>*/}
